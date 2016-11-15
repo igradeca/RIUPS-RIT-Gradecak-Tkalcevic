@@ -1,0 +1,15 @@
+E:\Workspaces\FERI\Razvoj in upravljanje programskih sistemov\projekt github\RIUPS Stack\Temp\UnityVS_bin\Debug\Assembly-CSharp.dll
+E:\Workspaces\FERI\Razvoj in upravljanje programskih sistemov\projekt github\RIUPS Stack\Temp\UnityVS_bin\Debug\Assembly-CSharp.pdb
+E:\Workspaces\FERI\Razvoj in upravljanje programskih sistemov\projekt github\RIUPS Stack\Temp\UnityVS_bin\Debug\UnityEditor.dll
+E:\Workspaces\FERI\Razvoj in upravljanje programskih sistemov\projekt github\RIUPS Stack\Temp\UnityVS_bin\Debug\UnityEngine.Analytics.dll
+E:\Workspaces\FERI\Razvoj in upravljanje programskih sistemov\projekt github\RIUPS Stack\Temp\UnityVS_bin\Debug\UnityEngine.dll
+E:\Workspaces\FERI\Razvoj in upravljanje programskih sistemov\projekt github\RIUPS Stack\Temp\UnityVS_bin\Debug\UnityEngine.Networking.dll
+E:\Workspaces\FERI\Razvoj in upravljanje programskih sistemov\projekt github\RIUPS Stack\Temp\UnityVS_bin\Debug\UnityEngine.UI.dll
+E:\Workspaces\FERI\Razvoj in upravljanje programskih sistemov\projekt github\RIUPS Stack\Temp\UnityVS_bin\Debug\UnityEngine.xml
+E:\Workspaces\FERI\Razvoj in upravljanje programskih sistemov\projekt github\RIUPS Stack\Temp\UnityVS_bin\Debug\UnityEngine.UI.xml
+E:\Workspaces\FERI\Razvoj in upravljanje programskih sistemov\projekt github\RIUPS Stack\Temp\UnityVS_bin\Debug\UnityEngine.Networking.xml
+E:\Workspaces\FERI\Razvoj in upravljanje programskih sistemov\projekt github\RIUPS Stack\Temp\UnityVS_bin\Debug\UnityEngine.Analytics.xml
+E:\Workspaces\FERI\Razvoj in upravljanje programskih sistemov\projekt github\RIUPS Stack\Temp\UnityVS_bin\Debug\UnityEditor.xml
+E:\Workspaces\FERI\Razvoj in upravljanje programskih sistemov\projekt github\RIUPS Stack\Temp\UnityVS_obj\Debug\RIUPS Stack.CSharp.csprojResolveAssemblyReference.cache
+E:\Workspaces\FERI\Razvoj in upravljanje programskih sistemov\projekt github\RIUPS Stack\Temp\UnityVS_obj\Debug\Assembly-CSharp.dll
+E:\Workspaces\FERI\Razvoj in upravljanje programskih sistemov\projekt github\RIUPS Stack\Temp\UnityVS_obj\Debug\Assembly-CSharp.pdb

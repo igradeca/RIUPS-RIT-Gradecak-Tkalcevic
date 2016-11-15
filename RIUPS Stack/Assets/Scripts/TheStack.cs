@@ -3,38 +3,47 @@ using System.Collections;
 
 public class TheStack : MonoBehaviour {
 
-    public GameObject TilePrefab;
+    public GameObject tilePrefab;
+    public GameObject currentTile;
     public int scoreCount;
 
 	void Start () {
         scoreCount = 0;
-	
+        InstantiateTile();
 	}
 
 	void Update () {
         if (Input.GetKeyDown(KeyCode.Space)) {
-            PlaceTile();
-            DropWholeStack();
+            scoreCount++;
+            currentTile.GetComponent<TileScript>().move = false;
+            DropStack();
+            InstantiateTile();            
+
             if (scoreCount >= 12) {
-                RemoveLowestTile();                
+                RemoveLowestTile();            
             }            
         }
-        	
+                
 	}
 
-    void PlaceTile () {
-        GameObject NewTile = Instantiate(TilePrefab, gameObject.transform) as GameObject;
-        NewTile.name = "Tile" + (scoreCount + 1);
-        NewTile.transform.position += new Vector3(0.0f, 0.15f, 0.0f);
-        scoreCount++;
+    void ChangeCurrentTile(GameObject tile) {
+        currentTile = tile;
     }
 
-    void DropWholeStack() {
-        gameObject.transform.position -= new Vector3(0.0f, 0.15f, 0.0f);
+    void InstantiateTile () {        
+        GameObject newTile = Instantiate(tilePrefab, gameObject.transform) as GameObject;
+        newTile.name = "Tile" + (scoreCount + 1);
+        newTile.GetComponent<TileScript>().movingOnX = ((scoreCount + 1) % 2 == 0 ? true : false);
+        ChangeCurrentTile(newTile);
+    }
+    
+    void DropStack () {
+        transform.position -= new Vector3(0, 1, 0);
+        //transform.position = Vector3.Lerp(transform.position, Vector3.down * scoreCount, 0.025f);
     }
 
     void RemoveLowestTile () {
-        Destroy(GameObject.Find("Tile" + (scoreCount - 12)) );
+        Destroy(GameObject.Find("Tile" + (scoreCount - 11)) );
     }
 
 }
