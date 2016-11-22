@@ -7,17 +7,20 @@ public class TileScript : MonoBehaviour {
     public float tileSpeed = 1.10f;
     public bool move;
     public bool movingOnX = false;
+    public float previousTilePositionX = 0;
+    public float previousTilePositionZ = 0;
 
-    private const float BOUND_SIZE = 5.8f;
+    private const float boundSize = 6.0f;
     private float tileTransition;
-    
-	// Use this for initialization
-	void Start () {
+    private const float errorMargin = 0.1f;
+    private float deltaX;
+
+    void Start () {
+
         move = true;
 	
 	}
 	
-	// Update is called once per frame
 	void Update () {
         if (move) {
             MoveTile();
@@ -28,11 +31,26 @@ public class TileScript : MonoBehaviour {
     void MoveTile() {
         tileTransition += Time.deltaTime * tileSpeed;
         if (movingOnX) {            
-            gameObject.transform.position = new Vector3(Mathf.Sin(tileTransition) * BOUND_SIZE, gameObject.transform.position.y, 0);
+            gameObject.transform.position = new Vector3(-(Mathf.Cos(tileTransition) * boundSize), gameObject.transform.position.y, previousTilePositionZ);
         } else {
-            gameObject.transform.position = new Vector3(0, gameObject.transform.position.y, Mathf.Sin(tileTransition) * BOUND_SIZE);
+            gameObject.transform.position = new Vector3(previousTilePositionX, gameObject.transform.position.y, Mathf.Cos(tileTransition) * boundSize);
+        }        
+    }
+
+    public void CutTile() {
+
+        if (movingOnX) {
+            deltaX = previousTilePositionX - gameObject.transform.position.x;
+        } else {
+            deltaX = previousTilePositionZ - gameObject.transform.position.z;
         }
-        
+
+        if (Mathf.Abs(deltaX) < errorMargin) {
+            Debug.Log("Combo!");
+            gameObject.transform.position = new Vector3(previousTilePositionX, gameObject.transform.position.y, previousTilePositionZ);
+        } else {
+            // CUT TEH PLO�A!
+        }
     }
 
 }
