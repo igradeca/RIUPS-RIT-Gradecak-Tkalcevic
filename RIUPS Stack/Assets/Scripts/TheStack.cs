@@ -6,24 +6,38 @@ public class TheStack : MonoBehaviour {
     public GameObject tilePrefab;
     public GameObject currentTile;
     public int scoreCount;
+    public int comboCount;
+    public bool isGameOver;
 
 	void Start () {
         scoreCount = 0;
+        comboCount = 0;
+        isGameOver = false;
+
         InstantiateTile();
 	}
 
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            PlaceTile();
-            if (scoreCount >= 12) {
-                RemoveLowestTile();            
-            }            
+
+        if (!isGameOver) {
+
+            if (Input.GetKeyDown(KeyCode.Space)) {
+                PlaceTile();
+                if (scoreCount >= 12) {
+                    RemoveLowestTile();
+                }
+            }
         }
+
 
 	}
 
-    void ChangeCurrentTile(GameObject tile) {
-        
+    public void IncreaseComboCount() {
+        comboCount++;
+        Debug.Log("Combo! " + comboCount);
+    }
+
+    void ChangeCurrentTile(GameObject tile) {        
         currentTile = tile;
     }
 
@@ -34,36 +48,45 @@ public class TheStack : MonoBehaviour {
 
     void InstantiateTile () {        
         GameObject newTile = Instantiate(tilePrefab, gameObject.transform) as GameObject;        
-        newTile.name = "Tile" + (scoreCount + 1);        
+        newTile.name = "Tile" + (scoreCount + 1);
+        newTile.transform.localScale = new Vector3(currentTile.transform.localScale.x, 1.0f, currentTile.transform.localScale.z);
 
-        if (currentTile) {
-            ModifyTilePosition(newTile);
+        if (currentTile.name != "Tile0") {
+            newTile.GetComponent<TileScript>().ChangeTileBounds(currentTile.GetComponent<TileScript>().tileBounds);
+        }        
 
-            if ((scoreCount + 1) % 2 == 0) {
-                newTile.GetComponent<TileScript>().movingOnX = true;
-            } else {
-                newTile.GetComponent<TileScript>().movingOnX = false;
-            }
+        ModifyTilePosition(newTile);
+
+        if ((scoreCount + 1) % 2 == 0) {
+            newTile.GetComponent<TileScript>().movingOnX = true;
+        } else {
+            newTile.GetComponent<TileScript>().movingOnX = false;
         }
+
         ChangeCurrentTile(newTile);
         newTile.transform.position = currentTile.transform.position;
     }
     
     void DropStack () {
         transform.position -= new Vector3(0, 1, 0);
-        //transform.position = Vector3.Lerp(transform.position, Vector3.down * scoreCount, 0.025f);
     }
 
-    void PlaceTile() {        
+    void PlaceTile() {
         scoreCount++;
         currentTile.GetComponent<TileScript>().move = false;
         currentTile.GetComponent<TileScript>().CutTile();
         DropStack();
         InstantiateTile();
+
     }
 
     void RemoveLowestTile () {
         Destroy(GameObject.Find("Tile" + (scoreCount - 12)) );
+    }
+
+    public void GameOver() {
+        isGameOver = true;
+        Debug.Log("Game over!");
     }
 
 }
