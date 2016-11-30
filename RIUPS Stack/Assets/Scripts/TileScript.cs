@@ -72,6 +72,14 @@ public class TileScript : MonoBehaviour {
 
                 float middle = previousTilePositionX + transform.position.x / 2;
                 transform.localScale = new Vector3(tileBounds.x, 1.0f, tileBounds.y);
+                CreateRubble(
+                    new Vector3(transform.position.x > 0 ?
+                    transform.position.x + (transform.localScale.x / 2) : 
+                    transform.position.x - (transform.localScale.x / 2),
+                    transform.position.y, 
+                    transform.position.z),
+                    new Vector3(Mathf.Abs(delta), 1, transform.localScale.z)
+                    );
                 transform.localPosition = new Vector3(middle - (previousTilePositionX / 2), transform.localPosition.y, previousTilePositionZ);
 
             } else {
@@ -84,7 +92,17 @@ public class TileScript : MonoBehaviour {
 
                 float middle = previousTilePositionZ + transform.position.z / 2;
                 transform.localScale = new Vector3(tileBounds.x, 1.0f, tileBounds.y);
+                CreateRubble(
+                    new Vector3(
+                    transform.position.x,
+                    transform.position.y,
+                    transform.position.z > 0 ?
+                    transform.position.z + (transform.localScale.z / 2) :
+                    transform.position.z - (transform.localScale.z / 2)),
+                    new Vector3(transform.localScale.x, 1, Mathf.Abs(delta))
+                    );
                 transform.localPosition = new Vector3(previousTilePositionX, transform.localPosition.y, middle - (previousTilePositionZ / 2));
+
             }
 
         }
@@ -101,8 +119,14 @@ public class TileScript : MonoBehaviour {
         transform.localScale = new Vector3(tileBounds.x, 1.0f, tileBounds.y);
     }
 
-    void CreateRubble() {
+    void CreateRubble(Vector3 pos, Vector3 scl) {
 
+        GameObject rubble = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        rubble.name = "Rubble of " + transform.name;
+        //rubble.transform.parent = gameObject.transform;
+        rubble.transform.localScale = scl;
+        rubble.transform.position = pos;
+        rubble.AddComponent<Rigidbody>();
     }
 
 }
