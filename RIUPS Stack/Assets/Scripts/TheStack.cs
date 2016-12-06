@@ -8,6 +8,8 @@ public class TheStack : MonoBehaviour {
     public int scoreCount;
     public int comboCount;
     public bool isGameOver;
+    public Color32[] gameColors = new Color32[4];
+    public Material stackMat;
 
 	void Start () {
         scoreCount = 0;
@@ -20,7 +22,6 @@ public class TheStack : MonoBehaviour {
 	void Update () {
 
         if (!isGameOver) {
-
             if (Input.GetKeyDown(KeyCode.Space)) {
                 PlaceTile();
                 if (scoreCount >= 12) {
@@ -28,7 +29,6 @@ public class TheStack : MonoBehaviour {
                 }
             }
         }
-
 
 	}
 
@@ -51,8 +51,11 @@ public class TheStack : MonoBehaviour {
         newTile.name = "Tile" + (scoreCount + 1);
         newTile.transform.localScale = new Vector3(currentTile.transform.localScale.x, 1.0f, currentTile.transform.localScale.z);
 
+        ColorMesh(newTile.GetComponent<MeshFilter>().mesh, scoreCount);
+
         if (currentTile.name != "Tile0") {
             newTile.GetComponent<TileScript>().ChangeTileBounds(currentTile.GetComponent<TileScript>().tileBounds);
+            //ColorMesh(currentTile.GetComponent<MeshFilter>().mesh);
         }        
 
         ModifyTilePosition(newTile);
@@ -71,17 +74,38 @@ public class TheStack : MonoBehaviour {
         transform.position -= new Vector3(0, 1, 0);
     }
 
-    void PlaceTile() {
-        scoreCount++;
+    void PlaceTile() {        
         currentTile.GetComponent<TileScript>().move = false;
         currentTile.GetComponent<TileScript>().CutTile();
         DropStack();
         InstantiateTile();
-
+        scoreCount++;
     }
 
     void RemoveLowestTile () {
         Destroy(GameObject.Find("Tile" + (scoreCount - 12)) );
+    }
+
+    private Color32 Lerp4(Color32 a, Color32 b, Color32 c, Color32 d, float t) {
+        if (t < 0.33f) {
+            return Color.Lerp(a, b, t / 0.33f);
+        } else if (t < 0.66f) {
+            return Color.Lerp(b, c, (t - 0.33f) / 0.33f);
+        } else {
+            return Color.Lerp(c, d, (t - 0.66f) / 0.66f);
+        }
+    }
+
+    public void ColorMesh(Mesh mesh, int scoreCount) {
+        Vector3[] verticles = mesh.vertices;
+        Color32[] colors = new Color32[verticles.Length];
+        float f = Mathf.Sin(scoreCount * 0.25f);
+
+        for (int i = 0; i < verticles.Length; i++) {
+            colors[i] = Lerp4(gameColors[0], gameColors[1], gameColors[2], gameColors[3], f);
+        }
+
+        mesh.colors32 = colors;
     }
 
     public void GameOver() {

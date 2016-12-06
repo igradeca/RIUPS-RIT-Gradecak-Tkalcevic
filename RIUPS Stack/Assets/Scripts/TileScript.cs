@@ -123,10 +123,13 @@ public class TileScript : MonoBehaviour {
 
         GameObject rubble = GameObject.CreatePrimitive(PrimitiveType.Cube);
         rubble.name = "Rubble of " + transform.name;
-        //rubble.transform.parent = gameObject.transform;
         rubble.transform.localScale = scl;
         rubble.transform.position = pos;
         rubble.AddComponent<Rigidbody>();
+        rubble.GetComponent<Rigidbody>().mass = 2;
+        rubble.GetComponent<MeshRenderer>().material = gameObject.GetComponent<MeshRenderer>().material;
+        stack.ColorMesh(rubble.GetComponent<MeshFilter>().mesh, stack.scoreCount-1);
+        Destroy(rubble, 10);
     }
 
 }
