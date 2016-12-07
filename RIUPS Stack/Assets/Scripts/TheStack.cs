@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class TheStack : MonoBehaviour {
 
@@ -11,8 +12,12 @@ public class TheStack : MonoBehaviour {
     public Color32[] gameColors = new Color32[4];
     public Material stackMat;
 
+    public Text scoreDisplay;
+
 	void Start () {
         scoreCount = 0;
+        scoreDisplay.text = "COUNT: " + scoreCount;
+
         comboCount = 0;
         isGameOver = false;
 
@@ -80,6 +85,7 @@ public class TheStack : MonoBehaviour {
         DropStack();
         InstantiateTile();
         scoreCount++;
+        scoreDisplay.text = "COUNT: " + scoreCount;
     }
 
     void RemoveLowestTile () {
@@ -99,7 +105,7 @@ public class TheStack : MonoBehaviour {
     public void ColorMesh(Mesh mesh, int scoreCount) {
         Vector3[] verticles = mesh.vertices;
         Color32[] colors = new Color32[verticles.Length];
-        float f = Mathf.Sin(scoreCount * 0.25f);
+        float f = Mathf.Sin(scoreCount * 0.10f);
 
         for (int i = 0; i < verticles.Length; i++) {
             colors[i] = Lerp4(gameColors[0], gameColors[1], gameColors[2], gameColors[3], f);
