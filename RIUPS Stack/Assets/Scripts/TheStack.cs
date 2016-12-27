@@ -27,11 +27,12 @@ public class TheStack : MonoBehaviour {
 	void Update () {
 
         if (!isGameOver) {
-            if (Input.GetKeyDown(KeyCode.Space)) {
+            if (Input.GetKeyDown(KeyCode.Space) && Time.timeScale == 1.0f) {
                 PlaceTile();
                 if (scoreCount >= 12) {
                     RemoveLowestTile();
                 }
+                GameObject.Find("Achievements(Clone)").GetComponent<AchievementScript>().GameplayAchievements(scoreCount, comboCount);
             }
         }
 
@@ -60,8 +61,9 @@ public class TheStack : MonoBehaviour {
 
         if (currentTile.name != "Tile0") {
             newTile.GetComponent<TileScript>().ChangeTileBounds(currentTile.GetComponent<TileScript>().tileBounds);
-            //ColorMesh(currentTile.GetComponent<MeshFilter>().mesh);
-        }        
+        } else {
+            ColorMesh(currentTile.GetComponent<MeshFilter>().mesh, scoreCount);
+        }
 
         ModifyTilePosition(newTile);
 
@@ -73,6 +75,8 @@ public class TheStack : MonoBehaviour {
 
         ChangeCurrentTile(newTile);
         newTile.transform.position = currentTile.transform.position;
+
+        newTile.SetActive(true);
     }
     
     void DropStack () {
@@ -115,8 +119,8 @@ public class TheStack : MonoBehaviour {
     }
 
     public void GameOver() {
+        --scoreCount;
         isGameOver = true;
-        Debug.Log("Game over!");
     }
 
 }
