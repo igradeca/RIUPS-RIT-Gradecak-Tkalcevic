@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2015
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RIUPS Stack.CSharp", "RIUPS Stack.CSharp.csproj", "{898BE06B-D5D4-BEDD-8574-D32F5F1598B8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RIUPS Stack.CSharp.Editor", "RIUPS Stack.CSharp.Editor.csproj", "{6DF7DD8C-7B47-659E-506F-EB4E9DC7F182}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{898BE06B-D5D4-BEDD-8574-D32F5F1598B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{898BE06B-D5D4-BEDD-8574-D32F5F1598B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{898BE06B-D5D4-BEDD-8574-D32F5F1598B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DF7DD8C-7B47-659E-506F-EB4E9DC7F182}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DF7DD8C-7B47-659E-506F-EB4E9DC7F182}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DF7DD8C-7B47-659E-506F-EB4E9DC7F182}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DF7DD8C-7B47-659E-506F-EB4E9DC7F182}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
