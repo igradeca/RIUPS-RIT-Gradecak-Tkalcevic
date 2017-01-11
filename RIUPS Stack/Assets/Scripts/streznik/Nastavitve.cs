@@ -9,6 +9,7 @@ namespace StackClone
 
         public static string GetConnectionString()
         {
+            string dataSource = "stackclone.ddns.net";
             SqlConnectionStringBuilder conBuild = new SqlConnectionStringBuilder();
             conBuild.UserID = "sa";
             conBuild.Password = "sM3!999";
@@ -16,7 +17,7 @@ namespace StackClone
             conBuild.PersistSecurityInfo = false;
             conBuild.PersistSecurityInfo = false;
             conBuild.InitialCatalog = "StackDB";
-            conBuild.DataSource = @"LUX-PC\SMETANOVASRV01";
+            conBuild.DataSource = dataSource;
             conBuild.Pooling = true;
             conBuild.AsynchronousProcessing = true;
             conBuild.ConnectTimeout = 10;

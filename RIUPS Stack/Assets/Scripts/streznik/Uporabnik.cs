@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Net;
+using System.Net.Sockets;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -56,7 +58,7 @@ namespace StackClone
         /// <returns>Eneg uporabnika ali prazno listo</returns>
         public static List<Uporabnik> Brskaj( int idUporabnika = -1, string uporabniskoIme = "")
         {
-            SqlConnection con = new SqlConnection( Nastavitve.GetConnectionString() );
+            SqlConnection con = new SqlConnection( Nastavitve.GetConnectionString());
             SqlCommand cmd = new SqlCommand();
             
             string where = " 1 = 1 ";
@@ -289,10 +291,10 @@ namespace StackClone
 
             if ( gesloHash != null && saltHash != null )
             {
-                cmd.Parameters.Add( "@Geslo", SqlDbType.Binary );
+                cmd.Parameters.Add( "@Geslo", SqlDbType.VarBinary );
                 cmd.Parameters["@Geslo"].Value = gesloHash;
 
-                cmd.Parameters.Add( "@Salt", SqlDbType.Binary );
+                cmd.Parameters.Add( "@Salt", SqlDbType.VarBinary );
                 cmd.Parameters["@Salt"].Value = saltHash;
             }
             
