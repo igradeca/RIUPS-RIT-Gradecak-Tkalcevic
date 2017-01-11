@@ -97,11 +97,33 @@ public class LoginRegisterScript : MonoBehaviour {
         }
         else
         {
+            List<Uporabnik> uporabnikList = Uporabnik.Brskaj( -1, regUsername.text );
+            if ( uporabnikList == null )
+            {
+                errorText.text = "Error!\nFailed to reach database.";
+                messageBox.SetActive( true );
+                return;
+            }
+            else if ( uporabnikList.Count > 0 )
+            {
+                errorText.text = "Error!\nUsername already in use.";
+                messageBox.SetActive( true );
+                return;
+            }
             Uporabnik novi = new Uporabnik( -1, regName.text, regLastName.text,
             regEmail.text, regUsername.text, Uporabnik.TipUporabnika.Uporabnik, 0 );
             int id = Uporabnik.Dodaj( novi, regPassword.text );
-
-            SceneManager.LoadScene( "main menu" );
+            if (id == -1)
+            {
+                errorText.text = "Error!\nFailed to reach database.";
+                messageBox.SetActive( true );
+                return;
+            }
+            else
+            {
+                SceneManager.LoadScene( "main menu" );
+            }
+            
         }
     }
 

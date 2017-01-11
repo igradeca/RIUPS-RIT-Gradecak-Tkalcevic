@@ -10,6 +10,7 @@ namespace StackClone
         public static string GetConnectionString()
         {
             string dataSource = "stackclone.ddns.net";
+            dataSource = @"127.0.0.1\SMETANOVASRV01";
             SqlConnectionStringBuilder conBuild = new SqlConnectionStringBuilder();
             conBuild.UserID = "sa";
             conBuild.Password = "sM3!999";

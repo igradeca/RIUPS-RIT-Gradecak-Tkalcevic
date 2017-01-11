@@ -101,9 +101,6 @@
     <Reference Include="Mono.Cecil">
       <HintPath>Library\UnityAssemblies\Mono.Cecil.dll</HintPath>
     </Reference>
-    <Reference Include="System.Data">
-      <HintPath>Assets\System.Data.dll</HintPath>
-    </Reference>
     <Reference Include="AsyncBridge.Net35">
       <HintPath>Assets\CSharp vNext Support\AsyncTools\Plugins\AsyncBridge.Net35.dll</HintPath>
     </Reference>
@@ -112,6 +109,12 @@
     </Reference>
     <Reference Include="CSharpVNextSupport">
       <HintPath>Assets\CSharp vNext Support\Editor\CSharpVNextSupport.dll</HintPath>
+    </Reference>
+    <Reference Include="I18N.West">
+      <HintPath>Assets\Plugins\I18N.West.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data">
+      <HintPath>Assets\Plugins\System.Data.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

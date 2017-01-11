@@ -119,43 +119,39 @@ namespace StackClone
         /// <returns>ID noveg uporabnika</returns>
         public static int Dodaj( Uporabnik uporabnik, string geslo )
         {
-            SqlConnection con = new SqlConnection( Nastavitve.GetConnectionString() );
-            SqlCommand cmd = new SqlCommand();
-
-            string into = "[StackDB].[dbo].[tblUporabnik]";
-            string insert = "INSERT INTO " + into + " (Ime, Priimek, Email, Uporabnik, Geslo, Salt, TipUporabnika, Kovanc) " +
-                "VALUES (@Ime, @Priimek, @Email, @Uporabnik, @Geslo, @Salt, @TipUporabnika, @Kovanc); " +
-                "SELECT CAST(scope_identity() as int)";//'" + uporabnik.Ime + "', '" + uporabnik.Priimek + "', '" + uporabnik.Email + "', '" +
-                                                                                                      //uporabnik.Uporabnisko + "', " + uporabnik.Tip + ", " + uporabnik.Kovanc;
-
-            byte[] gesloBytes = Encoding.UTF8.GetBytes( geslo );
-            byte[] saltBytes = Encoding.UTF8.GetBytes( CreateSalt( 20 ) );
-            byte[] gesloHash = GenerateSaltedHash( gesloBytes, saltBytes );
-
-            uporabnik.Parametriziraj( ref cmd, gesloHash, saltBytes );
-            cmd.CommandText = insert;
-            cmd.Connection = con;
-
-            try
+            using ( SqlConnection con = new SqlConnection( Nastavitve.GetConnectionString() ) )
             {
-                con.Open();
-                int? id = -1;
-                id = (int?)cmd.ExecuteScalar();
-                return (id != null) ? (int)id : -1;
-            }
-            catch ( TimeoutException tEx )
-            {
-                // Zapisivanje u log
-                return -1;
-            }
-            catch ( Exception ex )
-            {
-                // log
-                return -1;
-            }
-            finally
-            {
-                con.Close();
+                try
+                {
+                    con.Open();
+                    string into = "[StackDB].[dbo].[tblUporabnik]";
+                    string insert = "INSERT INTO " + into + " (Ime, Priimek, Email, Uporabnik, Geslo, Salt, TipUporabnika, Kovanc) " +
+                        "VALUES (@Ime, @Priimek, @Email, @Uporabnik, @Geslo, @Salt, @TipUporabnika, @Kovanc); " +
+                        "SELECT CAST(scope_identity() as int)";//'" + uporabnik.Ime + "', '" + uporabnik.Priimek + "', '" + uporabnik.Email + "', '" +
+                                                               //uporabnik.Uporabnisko + "', " + uporabnik.Tip + ", " + uporabnik.Kovanc;
+
+                    byte[] gesloBytes = Encoding.UTF8.GetBytes( geslo );
+                    byte[] saltBytes = Encoding.UTF8.GetBytes( CreateSalt( 20 ) );
+                    byte[] gesloHash = GenerateSaltedHash( gesloBytes, saltBytes );
+
+                    SqlCommand cmd = new SqlCommand( insert, con );
+                    uporabnik.Parametriziraj( ref cmd, gesloHash, saltBytes );
+                    cmd.CommandTimeout = 30;
+
+                    int? id = -1;
+                    id = (int?)cmd.ExecuteScalar();
+                    return (id != null) ? (int)id : -1;
+                }
+                catch ( TimeoutException tEx )
+                {
+                    // Zapisivanje u log
+                    return -1;
+                }
+                catch ( Exception ex )
+                {
+                    // log
+                    return -1;
+                }
             }
         }
 
