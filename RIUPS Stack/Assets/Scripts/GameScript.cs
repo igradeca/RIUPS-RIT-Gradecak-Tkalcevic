@@ -52,7 +52,7 @@ public class GameScript : MonoBehaviour {
         Time.timeScale = 1.0f;
         Time.fixedDeltaTime = 0.02f;
 
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(2);
     }
 
     public void BackToMainMenu() {

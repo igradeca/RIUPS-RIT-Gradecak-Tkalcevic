@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
@@ -8,15 +8,6 @@ namespace StackClone
     public class RezultatiScript : MonoBehaviour
     {
         public Text h1;
-        GameObject h2;
-        GameObject h3;
-        GameObject h4;
-        GameObject h5;
-        GameObject h6;
-        GameObject h7;
-        GameObject h8;
-        GameObject h9;
-        GameObject h10;
 
         // Use this for initialization
         void Start()

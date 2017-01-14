@@ -8,6 +8,9 @@ public class MainMenuScript : MonoBehaviour {
     public GameObject AchievementsCanvas;
     public GameObject AchievementObject;
 
+    public GameObject HighscoreCanvas;
+    public GameObject ShopCanvas;
+
     // Use this for initialization
     void Start () {
         
@@ -20,15 +23,37 @@ public class MainMenuScript : MonoBehaviour {
         SceneManager.LoadScene(sceneNumber);
     }
 
-    public void AchievementsButton() {
+    public void MenuButtons(int canvasNum) {
 
         if (MainMenuCanvas.activeSelf) {
             MainMenuCanvas.SetActive(false);
-            AchievementsCanvas.SetActive(true);
-            LoadAchievements();
+
+            switch (canvasNum) {
+                case 1:
+                    AchievementsCanvas.SetActive(true);
+                    LoadAchievements();
+                    break;
+                case 2:
+                    HighscoreCanvas.SetActive(true);
+                    break;
+                case 3:
+                    ShopCanvas.SetActive(true);
+                    break;
+            }
+
         } else {
             MainMenuCanvas.SetActive(true);
-            AchievementsCanvas.SetActive(false);
+            switch (canvasNum) {
+                case 1:
+                    AchievementsCanvas.SetActive(false);
+                    break;
+                case 2:
+                    HighscoreCanvas.SetActive(false);
+                    break;
+                case 3:
+                    ShopCanvas.SetActive(false);
+                    break;
+            }
         }
 
     }
