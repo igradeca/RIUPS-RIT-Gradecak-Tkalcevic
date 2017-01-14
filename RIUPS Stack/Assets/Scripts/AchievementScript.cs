@@ -2,6 +2,8 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using StackClone;
+using System.Collections.Generic;
 
 public class AchievementScript : MonoBehaviour {
 
@@ -12,7 +14,6 @@ public class AchievementScript : MonoBehaviour {
     void Awake () {
 
         DontDestroyOnLoad(transform.gameObject);
-        SceneManager.activeSceneChanged += SetAchievements;
 
         Achievements = new AchievementElementScript[5];
         Achievements[0] = new AchievementElementScript();
@@ -34,17 +35,15 @@ public class AchievementScript : MonoBehaviour {
         Achievements[4] = new AchievementElementScript();
         Achievements[4].title = "NOOB";
         Achievements[4].description = "MAKE YOUR FIRST COMBO";
-
-        //MainMenuAchievements();
     }
 
-    void SetAchievements(Scene previousScene, Scene newScene) {
-        /*
-        if (newScene.buildIndex == 0) {
-            GameplayAchievements();
-        } else if (newScene.buildIndex == 1) {
-            MainMenuAchievements();
-        }*/
+    void OnEnable() {
+        List<Dosezek> AchievementsList = new List<Dosezek>();
+        AchievementsList = Dosezek.Brskaj();
+
+        foreach (var item in AchievementsList) {
+            Debug.Log(item.Naziv + " " + item.Nagrada);
+        }
     }
 
     public void MainMenuAchievements() {
