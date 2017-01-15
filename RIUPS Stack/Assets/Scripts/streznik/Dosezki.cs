@@ -44,7 +44,7 @@ namespace StackClone
             where += (uporabnisko != "") ? ("AND (Uporabnik = '" + uporabnisko + "') ") : ("");
 
             string from = "[StackDB].[dbo].[tblDosezki]";
-            //  0    1       2     3
+            //                 0    1    2       3      4
             string select = "SELECT Id, Naziv, Nagrada, opis FROM " + from + " WHERE " + where;
 
 
@@ -52,7 +52,7 @@ namespace StackClone
             if ( idUporabnika != -1 || uporabnisko != "" )
             {
                 from = "[StackDB].[dbo].[viewDosezki]";
-                //    0        1       2        3
+                //          0        1       2        3      4
                 select = "SELECT DosezekId, Naziv, Nagrada, opis FROM " + from + " WHERE " + where;
             }
 
