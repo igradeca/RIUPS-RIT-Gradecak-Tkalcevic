@@ -133,6 +133,43 @@ namespace StackClone
         }
 
         /// <summary>
+        /// Dodavanje novog dosežka za uporabnika
+        /// </summary>
+        public static bool DodajDosezekUporabnika( int idUporabnika, int idDosezka )
+        {
+            SqlConnection con = new SqlConnection( Nastavitve.GetConnectionString() );
+            SqlCommand cmd = new SqlCommand();
+
+            string into = "[StackDB].[dbo].[tblDosezkiUporabnikov]";
+            string insert = "INSERT INTO " + into + " (IdUporabnika, IdDosezka) VALUES (" +
+                idUporabnika + ", " + idDosezka + ");";
+
+            cmd.CommandText = insert;
+            cmd.Connection = con;
+
+            try
+            {
+                con.Open();
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch ( TimeoutException tEx )
+            {
+                // Zapisivanje u log
+                return false;
+            }
+            catch ( Exception ex )
+            {
+                // log
+                return false;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        /// <summary>
         /// Brisanje dosežka iz baze
         /// </summary>
         /// <param name="idDosezka">Id dosežka kateroga brišemo</param>
