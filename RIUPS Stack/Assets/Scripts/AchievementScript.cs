@@ -21,7 +21,11 @@ public class AchievementScript : MonoBehaviour {
     public void MainMenuAchievements() {
 
         List<Dosezek> AchievementsList = new List<Dosezek>();
-        AchievementsList = Dosezek.Brskaj();
+        AchievementsList = Dosezek.Brskaj("", -1, -1, Manager.Current.User.Id);
+
+        // ili ovak
+        List<int> AchievementIDs = new List<int>();
+        AchievementIDs = Dosezek.UporabnikMaDosezek( Manager.Current.User.Id );
 
         int counter = 0;
         foreach (var item in AchievementsList) {

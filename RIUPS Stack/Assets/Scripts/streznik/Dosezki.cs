@@ -172,6 +172,61 @@ namespace StackClone
             }
         }
 
+
+
+        /// <summary>
+        /// Seznam dosezkov katere je uporabnik odljučal
+        /// </summary>
+        /// <returns>seznam dosezkov</returns>
+        public static List<int> UporabnikMaDosezek( int idUporabnika )
+        {
+            SqlConnection con = new SqlConnection( Nastavitve.GetConnectionString() );
+            SqlCommand cmd = new SqlCommand();
+
+            string where = "1 = 1 ";
+            where += (idUporabnika != -1) ? ("AND (UporabnikId = " + idUporabnika + ") ") : ("");
+
+            string from = "[StackDB].[dbo].[tblDosezkiUporabnikov]";
+            //                           0             1
+            string select = "SELECT IdUporabnika, idDosezka FROM " + from + " WHERE " + where;
+
+
+            cmd.CommandText = select;
+            cmd.Connection = con;
+
+            List<int> lista = new List<int>();
+
+            try
+            {
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while ( reader.Read() )
+                {
+                    int idDosezka = reader.GetInt32( 1 );
+
+                    lista.Add( idDosezka );
+                }
+                reader.Close();
+                return lista;
+            }
+            catch ( TimeoutException tEx )
+            {
+                // Zapisivanje u log
+                return null;
+            }
+            catch ( Exception ex )
+            {
+                // log
+                return null;
+            }
+            finally
+            {
+                con.Close();
+            }
+
+        }
+
+
         /// <summary>
         /// Brisanje dosežka iz baze
         /// </summary>
