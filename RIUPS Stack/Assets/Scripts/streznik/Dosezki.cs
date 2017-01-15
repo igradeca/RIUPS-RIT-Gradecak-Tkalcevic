@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 
@@ -8,11 +8,12 @@ namespace StackClone
     {
         public Dosezek() { }
 
-        public Dosezek(int id, string naziv, int nagrada)
+        public Dosezek(int id, string naziv, int nagrada, string opis)
         {
             Id = id;
             Naziv = naziv;
             Nagrada = nagrada;
+            Opis = opis;
         }
 
         public int Id { get; set; } = -1;
@@ -20,6 +21,8 @@ namespace StackClone
         public string Naziv { get; set; } = "";
 
         public int Nagrada { get; set; } = -1;
+
+        public string Opis { get; set; } = "";
 
 
         /// <summary>
@@ -42,16 +45,16 @@ namespace StackClone
             where += (uporabnisko != "") ? ("AND (Uporabnik = '" + uporabnisko + "') ") : ("");
 
             string from = "[StackDB].[dbo].[tblDosezki]";
-            //  0    1       2     
-            string select = "SELECT Id, Naziv, Nagrada FROM " + from + " WHERE " + where;
+            //  0    1       2          3
+            string select = "SELECT Id, Naziv, Nagrada, opis FROM " + from + " WHERE " + where;
 
 
             // če se brska za nekaterog uporabnika
             if ( idUporabnika != -1 || uporabnisko != "" )
             {
                 from = "[StackDB].[dbo].[viewDosezki]";
-                //    0        1       2
-                select = "SELECT DosezekId, Naziv, Nagrada FROM " + from + " WHERE " + where;
+                //    0        1       2        3
+                select = "SELECT DosezekId, Naziv, Nagrada, opis FROM " + from + " WHERE " + where;
             }
 
             cmd.CommandText = select;
@@ -68,8 +71,9 @@ namespace StackClone
                     int id = reader.GetInt32( 0 );
                     string nazivDosezka = reader.IsDBNull( 1 ) ? "" : reader.GetString( 1 ).Trim();
                     int nagrada = reader.IsDBNull( 2 ) ? -1 : reader.GetInt32( 2 );
+                    string opis = reader.IsDBNull(3) ? "" : reader.GetString(3).Trim();
 
-                    Dosezek enota = new Dosezek( id, nazivDosezka, nagrada );
+                    Dosezek enota = new Dosezek( id, nazivDosezka, nagrada, opis );
 
                     lista.Add( enota );
                 }
@@ -104,8 +108,8 @@ namespace StackClone
             SqlCommand cmd = new SqlCommand();
 
             string into = "[StackDB].[dbo].[tblDosezki]";
-            string insert = "INSERT INTO " + into + " (Naziv, Nagrada) VALUES ('" +
-                dosezek.Naziv + "', '" + dosezek.Nagrada + "');";
+            string insert = "INSERT INTO " + into + " (Naziv, Nagrada, opis) VALUES ('" +
+                dosezek.Naziv + "', '" + dosezek.Nagrada + "', '" + dosezek.Opis + "');";
 
             cmd.CommandText = insert;
             cmd.Connection = con;

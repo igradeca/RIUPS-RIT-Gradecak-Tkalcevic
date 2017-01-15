@@ -13,50 +13,30 @@ public class AchievementScript : MonoBehaviour {
     // Use this for initialization
     void Awake () {
 
-        DontDestroyOnLoad(transform.gameObject);
-
-        Achievements = new AchievementElementScript[5];
-        Achievements[0] = new AchievementElementScript();
-        Achievements[0].title = "BEGINNER";
-        Achievements[0].description = "REACH COUNT TO 10";
-
-        Achievements[1] = new AchievementElementScript();
-        Achievements[1].title = "HUNDERED";
-        Achievements[1].description = "REACH COUNT TO 100";
-
-        Achievements[2] = new AchievementElementScript();
-        Achievements[2].title = "COMBO MASTER";
-        Achievements[2].description = "COMBO 10x";
-
-        Achievements[3] = new AchievementElementScript();
-        Achievements[3].title = "MAYBE NEXT TIME";
-        Achievements[3].description = "SCORE 0 - ZERO!";
-
-        Achievements[4] = new AchievementElementScript();
-        Achievements[4].title = "NOOB";
-        Achievements[4].description = "MAKE YOUR FIRST COMBO";
-    }
-
-    void OnEnable() {
-        List<Dosezek> AchievementsList = new List<Dosezek>();
-        AchievementsList = Dosezek.Brskaj();
-
-        foreach (var item in AchievementsList) {
-            Debug.Log(item.Naziv + " " + item.Nagrada);
-        }
+        DontDestroyOnLoad(transform.gameObject);        
     }
 
     public void MainMenuAchievements() {
-        for (int i = 0; i < Achievements.Length; i++) {
+        List<Dosezek> AchievementsList = new List<Dosezek>();
+        AchievementsList = Dosezek.Brskaj();
+
+        int counter = 0;
+        foreach (var item in AchievementsList) {
+            Debug.Log(item.Id + " " + item.Naziv + " " + item.Nagrada + " " + item.Opis);
+
             GameObject AchievementTab = Instantiate(MenuTab) as GameObject;
-            AchievementTab.name = "Achievement" + i;
+            AchievementTab.name = "Achievement" + counter;
             AchievementTab.transform.SetParent(GameObject.Find("AchievementList").transform, false);
-            AchievementTab.transform.FindChild("Title").GetComponent<Text>().text = Achievements[i].title;
-            AchievementTab.transform.FindChild("Description").GetComponent<Text>().text = Achievements[i].description;
+            AchievementTab.transform.FindChild("Title").GetComponent<Text>().text = item.Naziv;
+            AchievementTab.transform.FindChild("Description").GetComponent<Text>().text = item.Opis;
+            /*
             if (Achievements[i].status) {
                 AchievementTab.transform.FindChild("StatusImage").gameObject.SetActive(true);
             }
-            AchievementTab.transform.localPosition = new Vector3(0, 220 - (i * 110), 0);
+            */
+            AchievementTab.transform.localPosition = new Vector3(0, 220 - (counter * 110), 0);
+
+            counter++;
         }
     }
 
@@ -104,6 +84,46 @@ public class AchievementScript : MonoBehaviour {
 
         unlockTab.transform.FindChild("Title").GetComponent<Text>().text = unlockedAchievement.title;
         unlockTab.GetComponent<Animator>().Play("AchievementUnlockAnim");
+    }
+
+    public void DodajBut() {
+
+        Achievements = new AchievementElementScript[5];
+        Achievements[0] = new AchievementElementScript();
+        Achievements[0].title = "BEGINNER";
+        Achievements[0].points = 10;
+        Achievements[0].description = "REACH COUNT TO 10";
+
+        Achievements[1] = new AchievementElementScript();
+        Achievements[1].title = "HUNDERED";
+        Achievements[1].points = 20;
+        Achievements[1].description = "REACH COUNT TO 100";
+
+        Achievements[2] = new AchievementElementScript();
+        Achievements[2].title = "COMBO MASTER";
+        Achievements[2].points = 10;
+        Achievements[2].description = "COMBO 10x";
+
+        Achievements[3] = new AchievementElementScript();
+        Achievements[3].title = "MAYBE NEXT TIME";
+        Achievements[3].points = 5;
+        Achievements[3].description = "SCORE 0 - ZERO!";
+
+        Achievements[4] = new AchievementElementScript();
+        Achievements[4].title = "NOOB";
+        Achievements[4].points = 5;
+        Achievements[4].description = "MAKE YOUR FIRST COMBO";
+
+        foreach (var item in Achievements) {
+            Dosezek novi = new Dosezek();
+
+            novi.Naziv = item.title;
+            novi.Nagrada = item.points;
+            novi.Opis = item.description;
+
+            Dosezek.Dodaj(novi);
+        }
+
     }
 
 }

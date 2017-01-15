@@ -4,6 +4,7 @@ using System.Collections;
 public class AchievementElementScript : AchievementScript {
 
     public string title;
+    public int points;
     public string description;
     public bool status;
 
