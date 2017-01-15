@@ -6,7 +6,7 @@ public class MainMenuScript : MonoBehaviour {
 
     public GameObject MainMenuCanvas;
     public GameObject AchievementsCanvas;
-    public GameObject AchievementObject;
+    public GameObject DontDestroyStuffObject;
 
     public GameObject HighscoreCanvas;
     public GameObject ShopCanvas;
@@ -17,8 +17,8 @@ public class MainMenuScript : MonoBehaviour {
     }
 
     public void StartScene(int sceneNumber) {
-        if (!GameObject.Find("Achievements(Clone)")) {
-            Instantiate(AchievementObject);
+        if (!GameObject.Find("UserStuff")) {
+            Instantiate(DontDestroyStuffObject);
         }
         SceneManager.LoadScene(sceneNumber);
     }
@@ -63,11 +63,11 @@ public class MainMenuScript : MonoBehaviour {
     }
 
     void LoadAchievements() {
-        if (!GameObject.Find("Achievements(Clone)")) {
-            Instantiate(AchievementObject);
-            GameObject.Find("Achievements(Clone)").GetComponent<AchievementScript>().MainMenuAchievements();
+        if (!GameObject.Find("UserStuff")) {
+            Instantiate(DontDestroyStuffObject);
+            GameObject.Find("UserStuff").GetComponent<AchievementScript>().MainMenuAchievements();
         } else if (GameObject.Find("AchievementList").transform.childCount == 0) {
-            GameObject.Find("Achievements(Clone)").GetComponent<AchievementScript>().MainMenuAchievements();
+            GameObject.Find("UserStuff").GetComponent<AchievementScript>().MainMenuAchievements();
         }
     }
 

@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 using StackClone;
@@ -15,6 +15,7 @@ public class LoginRegisterScript : MonoBehaviour {
     public GameObject registerCanvas;
     public GameObject initialCanvas;
     public GameObject messageBox;
+    public GameObject loginUserInfo;
 
     public Text username;
     public Text password;
@@ -82,6 +83,10 @@ public class LoginRegisterScript : MonoBehaviour {
             }
             else if ( passwordValid )
             {
+                Instantiate(loginUserInfo);
+                GameObject.Find("UserStuff").GetComponent<UserInfoScript>().Username = uporabnik.Uporabnisko;
+                GameObject.Find("UserStuff").GetComponent<UserInfoScript>().userID = uporabnik.Id;
+
                 SceneManager.LoadScene( "main menu" );
             }
         }
@@ -121,7 +126,7 @@ public class LoginRegisterScript : MonoBehaviour {
             }
             else
             {
-                SceneManager.LoadScene( "main menu" );
+                SceneManager.LoadScene("Login");
             }
             
         }

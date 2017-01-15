@@ -13,7 +13,7 @@ public class AchievementScript : MonoBehaviour {
     // Use this for initialization
     void Awake () {
 
-        DontDestroyOnLoad(transform.gameObject);
+        
 
         //Achievements = new AchievementElementScript[5];
     }
@@ -36,6 +36,7 @@ public class AchievementScript : MonoBehaviour {
             }
             */
             AchievementTab.transform.localPosition = new Vector3(0, 220 - (counter * 110), 0);
+            counter++;
         }
     }
 
