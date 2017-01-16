@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Data.SqlClient;
 using System.Collections.Generic;
 
@@ -86,14 +86,14 @@ namespace StackClone
         /// </summary>
         /// <param name="rezultat">Objekt z rezultatom kateroga hočemo dodati v bazo</param>
         /// <returns></returns>
-        public static bool Dodaj( TopRezultat rezultat )
+        public static bool Dodaj( int userId, int score )
         {
             SqlConnection con = new SqlConnection( Nastavitve.GetConnectionString() );
             SqlCommand cmd = new SqlCommand();
 
             string into = "[StackDB].[dbo].[tblTopRezultati]";
             string insert = "INSERT INTO " + into + " (IdUporabnika, Rezultat) VALUES (" +
-                rezultat.Uporabnik + ", " + rezultat.Rezultat + ");";
+                userId + ", " + score + ");";
 
             cmd.CommandText = insert;
             cmd.Connection = con;

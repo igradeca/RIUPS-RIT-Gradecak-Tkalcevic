@@ -28,7 +28,15 @@ public class GameScript : MonoBehaviour {
         Time.fixedDeltaTime = 0.0f;
 
         gameStopCanvas.SetActive(true);
-        GameObject.Find("GameStoppedText").GetComponent<Text>().text = "GAME OVER";
+
+        int userId = GameObject.Find("UserStuff").GetComponent<UserInfoScript>().userID;
+        int scoreCount = GameObject.Find("TheStack").GetComponent<TheStack>().scoreCount;
+        if (GameObject.Find("Main Camera").GetComponent<HighscoreScript>().CheckHighscore(userId, scoreCount)) {
+            GameObject.Find("GameStoppedText").GetComponent<Text>().text = "GAME OVER\nNEW HIGHSCORE!";
+        } else {
+            GameObject.Find("GameStoppedText").GetComponent<Text>().text = "GAME OVER";
+        }   
+             
         GameObject.Find("ResumeButton").SetActive(false);
     }
          

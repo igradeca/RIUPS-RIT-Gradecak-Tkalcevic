@@ -91,7 +91,6 @@
     <Compile Include="Assets\Scripts\HighscoreScript.cs" />
     <Compile Include="Assets\Scripts\LoginRegisterScript.cs" />
     <Compile Include="Assets\Scripts\MainMenuScript.cs" />
-    <Compile Include="Assets\Scripts\RezultatiScript.cs" />
     <Compile Include="Assets\Scripts\TheStack.cs" />
     <Compile Include="Assets\Scripts\TileScript.cs" />
     <Compile Include="Assets\Scripts\UserInfoScript.cs" />

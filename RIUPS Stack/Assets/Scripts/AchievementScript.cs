@@ -42,11 +42,11 @@ public class AchievementScript : MonoBehaviour {
             AchievementTab.transform.SetParent(GameObject.Find("AchievementList").transform, false);
             AchievementTab.transform.FindChild("Title").GetComponent<Text>().text = item.Naziv;
             AchievementTab.transform.FindChild("Description").GetComponent<Text>().text = item.Opis;
-            /*
+            
             if (AchievementIDs.Count != 0 && AchievementIDs.Contains(item.Id)) {
                 AchievementTab.transform.FindChild("StatusImage").gameObject.SetActive(true);
             }
-            */
+            
             AchievementTab.transform.localPosition = new Vector3(0, 220 - (counter * 110), 0);
             counter++;
         }
@@ -56,9 +56,10 @@ public class AchievementScript : MonoBehaviour {
 
         switch (count) {
             case 0:
-                if (!Achievements[3].status) {
-                    Achievements[3].status = true;
-                    //UnlockShow(Achievements[3]);
+                if (!AchievementIDs.Contains(7)) {
+                    Dosezek.DodajDosezekUporabnika(GameObject.Find("UserStuff").GetComponent<UserInfoScript>().userID, 7);
+                    List<Dosezek> unlock = Dosezek.Brskaj("", 7);
+                    UnlockShow(unlock.Find(x => x.Id == 7));
                 }
                 break;
             case 10:
@@ -69,24 +70,27 @@ public class AchievementScript : MonoBehaviour {
                 }
                 break;
             case 100:
-                if (!Achievements[1].status) {
-                    Achievements[1].status = true;
-                    //UnlockShow(Achievements[1]);
+                if (!AchievementIDs.Contains(5)) {
+                    Dosezek.DodajDosezekUporabnika(GameObject.Find("UserStuff").GetComponent<UserInfoScript>().userID, 5);
+                    List<Dosezek> unlock = Dosezek.Brskaj("", 5);
+                    UnlockShow(unlock.Find(x => x.Id == 5));
                 }
                 break;
         }
 
         switch (combo) {
             case 10:
-                if (!Achievements[2].status) {
-                    Achievements[2].status = true;
-                    //UnlockShow(Achievements[2]);
+                if (!AchievementIDs.Contains(6)) {
+                    Dosezek.DodajDosezekUporabnika(GameObject.Find("UserStuff").GetComponent<UserInfoScript>().userID, 6);
+                    List<Dosezek> unlock = Dosezek.Brskaj("", 6);
+                    UnlockShow(unlock.Find(x => x.Id == 6));
                 }
                 break;
             case 5:
-                if (!Achievements[4].status) {
-                    Achievements[4].status = true;
-                    //UnlockShow(Achievements[4]);
+                if (!AchievementIDs.Contains(8)) {
+                    Dosezek.DodajDosezekUporabnika(GameObject.Find("UserStuff").GetComponent<UserInfoScript>().userID, 8);
+                    List<Dosezek> unlock = Dosezek.Brskaj("", 8);
+                    UnlockShow(unlock.Find(x => x.Id == 8));
                 }
                 break;
         }
