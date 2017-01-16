@@ -1,41 +1,41 @@
 ********************************************************************************
-*                     Monday, January 16, 2017 6:07:08 PM                      *
+*                     Monday, January 16, 2017 6:55:21 PM                      *
 ********************************************************************************
 CSharpCompilerWrapper.exe version: 2.0.0.0
 Platform: Windows
 Target assembly: Assembly-CSharp.dll
-Project directory: E:\Workspaces\FERI\Razvoj in upravljanje programskih sistemov\projekt github\RIUPS Stack
-Unity 'Data' or 'Frameworks' directory: D:/Unity/Editor/Data
+Project directory: F:\My documents\Škola\Faks\7. Semestar\Razvoj in upravljanje programskih sistemov\Projekt\RIUPS-RIT-Gradecak-Tkalcevic\RIUPS Stack
+Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
 Compiler: Microsoft C# 6.0
 
 - Compilation -----------------------------------------------
 
-Process: E:\Workspaces\FERI\Razvoj in upravljanje programskih sistemov\projekt github\RIUPS Stack\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"D:/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"D:/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"D:/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"D:/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-e4ccaa5ec4923da4d80a99af57938c56 
+Process: F:\My documents\Škola\Faks\7. Semestar\Razvoj in upravljanje programskih sistemov\Projekt\RIUPS-RIT-Gradecak-Tkalcevic\RIUPS Stack\CSharp60Support\Roslyn\csc.exe
+Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-5acec7bb709439648bab1b73ae54e763 
 Exit code: 0
-Elapsed time: 3.39 sec
+Elapsed time: 3.13 sec
 
 - Compiler output (0 lines):
 
 - Compiler errors (29 lines):
 0: Assets\Scripts\streznik\Uporabnik.cs(98,38): warning CS0168: The variable 'tEx' is declared but never used
 1: Assets\Scripts\streznik\Uporabnik.cs(103,31): warning CS0168: The variable 'ex' is declared but never used
-2: Assets\Scripts\streznik\Dosezki.cs(83,38): warning CS0168: The variable 'tEx' is declared but never used
-3: Assets\Scripts\streznik\Dosezki.cs(88,31): warning CS0168: The variable 'ex' is declared but never used
-4: Assets\Scripts\streznik\Dosezki.cs(123,38): warning CS0168: The variable 'tEx' is declared but never used
-5: Assets\Scripts\streznik\Dosezki.cs(128,31): warning CS0168: The variable 'ex' is declared but never used
-6: Assets\Scripts\streznik\Dosezki.cs(160,38): warning CS0168: The variable 'tEx' is declared but never used
-7: Assets\Scripts\streznik\Dosezki.cs(165,31): warning CS0168: The variable 'ex' is declared but never used
-8: Assets\Scripts\streznik\Uporabnik.cs(145,42): warning CS0168: The variable 'tEx' is declared but never used
-9: Assets\Scripts\streznik\Uporabnik.cs(150,35): warning CS0168: The variable 'ex' is declared but never used
-10: Assets\Scripts\streznik\Dosezki.cs(213,38): warning CS0168: The variable 'tEx' is declared but never used
-11: Assets\Scripts\streznik\Dosezki.cs(218,31): warning CS0168: The variable 'ex' is declared but never used
-12: Assets\Scripts\streznik\Dosezki.cs(253,38): warning CS0168: The variable 'tEx' is declared but never used
-13: Assets\Scripts\streznik\Dosezki.cs(258,31): warning CS0168: The variable 'ex' is declared but never used
-14: Assets\Scripts\streznik\Uporabnik.cs(201,38): warning CS0168: The variable 'tEx' is declared but never used
-15: Assets\Scripts\streznik\Uporabnik.cs(206,31): warning CS0168: The variable 'ex' is declared but never used
-16: Assets\Scripts\streznik\Uporabnik.cs(239,38): warning CS0168: The variable 'tEx' is declared but never used
-17: Assets\Scripts\streznik\Uporabnik.cs(244,31): warning CS0168: The variable 'ex' is declared but never used
+2: Assets\Scripts\streznik\Uporabnik.cs(145,42): warning CS0168: The variable 'tEx' is declared but never used
+3: Assets\Scripts\streznik\Uporabnik.cs(150,35): warning CS0168: The variable 'ex' is declared but never used
+4: Assets\Scripts\streznik\Dosezki.cs(83,38): warning CS0168: The variable 'tEx' is declared but never used
+5: Assets\Scripts\streznik\Uporabnik.cs(201,38): warning CS0168: The variable 'tEx' is declared but never used
+6: Assets\Scripts\streznik\Dosezki.cs(88,31): warning CS0168: The variable 'ex' is declared but never used
+7: Assets\Scripts\streznik\Uporabnik.cs(206,31): warning CS0168: The variable 'ex' is declared but never used
+8: Assets\Scripts\streznik\Uporabnik.cs(239,38): warning CS0168: The variable 'tEx' is declared but never used
+9: Assets\Scripts\streznik\Uporabnik.cs(244,31): warning CS0168: The variable 'ex' is declared but never used
+10: Assets\Scripts\streznik\Dosezki.cs(123,38): warning CS0168: The variable 'tEx' is declared but never used
+11: Assets\Scripts\streznik\Dosezki.cs(128,31): warning CS0168: The variable 'ex' is declared but never used
+12: Assets\Scripts\streznik\Dosezki.cs(160,38): warning CS0168: The variable 'tEx' is declared but never used
+13: Assets\Scripts\streznik\Dosezki.cs(165,31): warning CS0168: The variable 'ex' is declared but never used
+14: Assets\Scripts\streznik\Dosezki.cs(213,38): warning CS0168: The variable 'tEx' is declared but never used
+15: Assets\Scripts\streznik\Dosezki.cs(218,31): warning CS0168: The variable 'ex' is declared but never used
+16: Assets\Scripts\streznik\Dosezki.cs(253,38): warning CS0168: The variable 'tEx' is declared but never used
+17: Assets\Scripts\streznik\Dosezki.cs(258,31): warning CS0168: The variable 'ex' is declared but never used
 18: Assets\Scripts\streznik\TopRezultat.cs(68,38): warning CS0168: The variable 'tEx' is declared but never used
 19: Assets\Scripts\streznik\TopRezultat.cs(73,31): warning CS0168: The variable 'ex' is declared but never used
 20: Assets\Scripts\streznik\TopRezultat.cs(107,38): warning CS0168: The variable 'tEx' is declared but never used
@@ -50,289 +50,28 @@ Elapsed time: 3.39 sec
 
 - PDB to MDB conversion --------------------------------------
 
-Process: E:\Workspaces\FERI\Razvoj in upravljanje programskih sistemov\projekt github\RIUPS Stack\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp.dll
-Exit code: 0
-Elapsed time: 0.16 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                     Monday, January 16, 2017 6:07:12 PM                      *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 2.0.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp-Editor.dll
-Project directory: E:\Workspaces\FERI\Razvoj in upravljanje programskih sistemov\projekt github\RIUPS Stack
-Unity 'Data' or 'Frameworks' directory: D:/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: E:\Workspaces\FERI\Razvoj in upravljanje programskih sistemov\projekt github\RIUPS Stack\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"D:/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"D:/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"D:/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"D:/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-16db5decc99ab5f4993eaf7a320f37cf 
-Exit code: 0
-Elapsed time: 2.31 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (0 lines):
-
-- PDB to MDB conversion --------------------------------------
-
-Process: E:\Workspaces\FERI\Razvoj in upravljanje programskih sistemov\projekt github\RIUPS Stack\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp-Editor.dll
-Exit code: 0
-Elapsed time: 0.14 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                     Monday, January 16, 2017 6:07:56 PM                      *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 2.0.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp.dll
-Project directory: E:\Workspaces\FERI\Razvoj in upravljanje programskih sistemov\projekt github\RIUPS Stack
-Unity 'Data' or 'Frameworks' directory: D:/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: E:\Workspaces\FERI\Razvoj in upravljanje programskih sistemov\projekt github\RIUPS Stack\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"D:/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"D:/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"D:/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"D:/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-2c2ce9c59e5a5e746807eb3e669f1dd9 
-Exit code: 0
-Elapsed time: 3.24 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (29 lines):
-0: Assets\Scripts\streznik\Uporabnik.cs(98,38): warning CS0168: The variable 'tEx' is declared but never used
-1: Assets\Scripts\streznik\Uporabnik.cs(103,31): warning CS0168: The variable 'ex' is declared but never used
-2: Assets\Scripts\streznik\Uporabnik.cs(145,42): warning CS0168: The variable 'tEx' is declared but never used
-3: Assets\Scripts\streznik\Uporabnik.cs(150,35): warning CS0168: The variable 'ex' is declared but never used
-4: Assets\Scripts\streznik\Uporabnik.cs(201,38): warning CS0168: The variable 'tEx' is declared but never used
-5: Assets\Scripts\streznik\Uporabnik.cs(206,31): warning CS0168: The variable 'ex' is declared but never used
-6: Assets\Scripts\streznik\Uporabnik.cs(239,38): warning CS0168: The variable 'tEx' is declared but never used
-7: Assets\Scripts\streznik\Uporabnik.cs(244,31): warning CS0168: The variable 'ex' is declared but never used
-8: Assets\Scripts\streznik\Uporabnik.cs(414,38): warning CS0168: The variable 'tEx' is declared but never used
-9: Assets\Scripts\streznik\Uporabnik.cs(419,31): warning CS0168: The variable 'ex' is declared but never used
-10: Assets\Scripts\streznik\TopRezultat.cs(68,38): warning CS0168: The variable 'tEx' is declared but never used
-11: Assets\Scripts\streznik\TopRezultat.cs(73,31): warning CS0168: The variable 'ex' is declared but never used
-12: Assets\Scripts\streznik\Dosezki.cs(83,38): warning CS0168: The variable 'tEx' is declared but never used
-13: Assets\Scripts\streznik\Dosezki.cs(88,31): warning CS0168: The variable 'ex' is declared but never used
-14: Assets\Scripts\streznik\TopRezultat.cs(107,38): warning CS0168: The variable 'tEx' is declared but never used
-15: Assets\Scripts\streznik\TopRezultat.cs(112,31): warning CS0168: The variable 'ex' is declared but never used
-16: Assets\Scripts\streznik\Dosezki.cs(123,38): warning CS0168: The variable 'tEx' is declared but never used
-17: Assets\Scripts\streznik\Dosezki.cs(128,31): warning CS0168: The variable 'ex' is declared but never used
-18: Assets\Scripts\streznik\TopRezultat.cs(145,38): warning CS0168: The variable 'tEx' is declared but never used
-19: Assets\Scripts\streznik\TopRezultat.cs(150,31): warning CS0168: The variable 'ex' is declared but never used
-20: Assets\Scripts\streznik\Dosezki.cs(160,38): warning CS0168: The variable 'tEx' is declared but never used
-21: Assets\Scripts\streznik\Dosezki.cs(165,31): warning CS0168: The variable 'ex' is declared but never used
-22: Assets\Scripts\streznik\TopRezultat.cs(186,38): warning CS0168: The variable 'tEx' is declared but never used
-23: Assets\Scripts\streznik\TopRezultat.cs(191,31): warning CS0168: The variable 'ex' is declared but never used
-24: Assets\Scripts\streznik\Dosezki.cs(213,38): warning CS0168: The variable 'tEx' is declared but never used
-25: Assets\Scripts\streznik\Dosezki.cs(218,31): warning CS0168: The variable 'ex' is declared but never used
-26: Assets\Scripts\streznik\Dosezki.cs(253,38): warning CS0168: The variable 'tEx' is declared but never used
-27: Assets\Scripts\streznik\Dosezki.cs(258,31): warning CS0168: The variable 'ex' is declared but never used
-28: Assets\Scripts\AchievementScript.cs(11,40): warning CS0649: Field 'AchievementScript.Achievements' is never assigned to, and will always have its default value null
-
-- PDB to MDB conversion --------------------------------------
-
-Process: E:\Workspaces\FERI\Razvoj in upravljanje programskih sistemov\projekt github\RIUPS Stack\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp.dll
-Exit code: 0
-Elapsed time: 0.17 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                     Monday, January 16, 2017 6:08:00 PM                      *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 2.0.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp-Editor.dll
-Project directory: E:\Workspaces\FERI\Razvoj in upravljanje programskih sistemov\projekt github\RIUPS Stack
-Unity 'Data' or 'Frameworks' directory: D:/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: E:\Workspaces\FERI\Razvoj in upravljanje programskih sistemov\projekt github\RIUPS Stack\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"D:/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"D:/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"D:/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"D:/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-239ca8830fd7ed8459bd0557eec8d0cc 
-Exit code: 0
-Elapsed time: 2.49 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (0 lines):
-
-- PDB to MDB conversion --------------------------------------
-
-Process: E:\Workspaces\FERI\Razvoj in upravljanje programskih sistemov\projekt github\RIUPS Stack\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp-Editor.dll
-Exit code: 0
-Elapsed time: 0.13 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                     Monday, January 16, 2017 6:11:47 PM                      *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 2.0.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp.dll
-Project directory: E:\Workspaces\FERI\Razvoj in upravljanje programskih sistemov\projekt github\RIUPS Stack
-Unity 'Data' or 'Frameworks' directory: D:/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: E:\Workspaces\FERI\Razvoj in upravljanje programskih sistemov\projekt github\RIUPS Stack\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"D:/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"D:/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"D:/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"D:/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-c9a1ce98bb820934188499d892fe1fbc 
-Exit code: 0
-Elapsed time: 3.05 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (29 lines):
-0: Assets\Scripts\streznik\Uporabnik.cs(98,38): warning CS0168: The variable 'tEx' is declared but never used
-1: Assets\Scripts\streznik\Uporabnik.cs(103,31): warning CS0168: The variable 'ex' is declared but never used
-2: Assets\Scripts\streznik\Uporabnik.cs(145,42): warning CS0168: The variable 'tEx' is declared but never used
-3: Assets\Scripts\streznik\Uporabnik.cs(150,35): warning CS0168: The variable 'ex' is declared but never used
-4: Assets\Scripts\streznik\Uporabnik.cs(201,38): warning CS0168: The variable 'tEx' is declared but never used
-5: Assets\Scripts\streznik\Uporabnik.cs(206,31): warning CS0168: The variable 'ex' is declared but never used
-6: Assets\Scripts\streznik\Uporabnik.cs(239,38): warning CS0168: The variable 'tEx' is declared but never used
-7: Assets\Scripts\streznik\Uporabnik.cs(244,31): warning CS0168: The variable 'ex' is declared but never used
-8: Assets\Scripts\streznik\Uporabnik.cs(414,38): warning CS0168: The variable 'tEx' is declared but never used
-9: Assets\Scripts\streznik\Uporabnik.cs(419,31): warning CS0168: The variable 'ex' is declared but never used
-10: Assets\Scripts\streznik\TopRezultat.cs(68,38): warning CS0168: The variable 'tEx' is declared but never used
-11: Assets\Scripts\streznik\TopRezultat.cs(73,31): warning CS0168: The variable 'ex' is declared but never used
-12: Assets\Scripts\streznik\TopRezultat.cs(107,38): warning CS0168: The variable 'tEx' is declared but never used
-13: Assets\Scripts\streznik\TopRezultat.cs(112,31): warning CS0168: The variable 'ex' is declared but never used
-14: Assets\Scripts\streznik\TopRezultat.cs(145,38): warning CS0168: The variable 'tEx' is declared but never used
-15: Assets\Scripts\streznik\TopRezultat.cs(150,31): warning CS0168: The variable 'ex' is declared but never used
-16: Assets\Scripts\streznik\TopRezultat.cs(186,38): warning CS0168: The variable 'tEx' is declared but never used
-17: Assets\Scripts\streznik\TopRezultat.cs(191,31): warning CS0168: The variable 'ex' is declared but never used
-18: Assets\Scripts\streznik\Dosezki.cs(83,38): warning CS0168: The variable 'tEx' is declared but never used
-19: Assets\Scripts\streznik\Dosezki.cs(88,31): warning CS0168: The variable 'ex' is declared but never used
-20: Assets\Scripts\streznik\Dosezki.cs(123,38): warning CS0168: The variable 'tEx' is declared but never used
-21: Assets\Scripts\streznik\Dosezki.cs(128,31): warning CS0168: The variable 'ex' is declared but never used
-22: Assets\Scripts\streznik\Dosezki.cs(160,38): warning CS0168: The variable 'tEx' is declared but never used
-23: Assets\Scripts\streznik\Dosezki.cs(165,31): warning CS0168: The variable 'ex' is declared but never used
-24: Assets\Scripts\streznik\Dosezki.cs(213,38): warning CS0168: The variable 'tEx' is declared but never used
-25: Assets\Scripts\streznik\Dosezki.cs(218,31): warning CS0168: The variable 'ex' is declared but never used
-26: Assets\Scripts\streznik\Dosezki.cs(253,38): warning CS0168: The variable 'tEx' is declared but never used
-27: Assets\Scripts\streznik\Dosezki.cs(258,31): warning CS0168: The variable 'ex' is declared but never used
-28: Assets\Scripts\AchievementScript.cs(11,40): warning CS0649: Field 'AchievementScript.Achievements' is never assigned to, and will always have its default value null
-
-- PDB to MDB conversion --------------------------------------
-
-Process: E:\Workspaces\FERI\Razvoj in upravljanje programskih sistemov\projekt github\RIUPS Stack\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp.dll
-Exit code: 0
-Elapsed time: 0.18 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                     Monday, January 16, 2017 6:11:51 PM                      *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 2.0.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp-Editor.dll
-Project directory: E:\Workspaces\FERI\Razvoj in upravljanje programskih sistemov\projekt github\RIUPS Stack
-Unity 'Data' or 'Frameworks' directory: D:/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: E:\Workspaces\FERI\Razvoj in upravljanje programskih sistemov\projekt github\RIUPS Stack\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"D:/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"D:/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"D:/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"D:/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-d4104a6040f739040a1389bc0d213f3b 
-Exit code: 0
-Elapsed time: 2.42 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (0 lines):
-
-- PDB to MDB conversion --------------------------------------
-
-Process: E:\Workspaces\FERI\Razvoj in upravljanje programskih sistemov\projekt github\RIUPS Stack\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp-Editor.dll
-Exit code: 0
-Elapsed time: 0.12 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                     Monday, January 16, 2017 6:16:08 PM                      *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 2.0.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp.dll
-Project directory: E:\Workspaces\FERI\Razvoj in upravljanje programskih sistemov\projekt github\RIUPS Stack
-Unity 'Data' or 'Frameworks' directory: D:/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: E:\Workspaces\FERI\Razvoj in upravljanje programskih sistemov\projekt github\RIUPS Stack\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"D:/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"D:/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"D:/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"D:/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-207dce9216918bf4a81439eee1694d45 
-Exit code: 0
-Elapsed time: 3.19 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (29 lines):
-0: Assets\Scripts\streznik\Uporabnik.cs(98,38): warning CS0168: The variable 'tEx' is declared but never used
-1: Assets\Scripts\streznik\Uporabnik.cs(103,31): warning CS0168: The variable 'ex' is declared but never used
-2: Assets\Scripts\streznik\Uporabnik.cs(145,42): warning CS0168: The variable 'tEx' is declared but never used
-3: Assets\Scripts\streznik\Uporabnik.cs(150,35): warning CS0168: The variable 'ex' is declared but never used
-4: Assets\Scripts\streznik\Uporabnik.cs(201,38): warning CS0168: The variable 'tEx' is declared but never used
-5: Assets\Scripts\streznik\Uporabnik.cs(206,31): warning CS0168: The variable 'ex' is declared but never used
-6: Assets\Scripts\streznik\Uporabnik.cs(239,38): warning CS0168: The variable 'tEx' is declared but never used
-7: Assets\Scripts\streznik\Uporabnik.cs(244,31): warning CS0168: The variable 'ex' is declared but never used
-8: Assets\Scripts\streznik\Uporabnik.cs(414,38): warning CS0168: The variable 'tEx' is declared but never used
-9: Assets\Scripts\streznik\Uporabnik.cs(419,31): warning CS0168: The variable 'ex' is declared but never used
-10: Assets\Scripts\streznik\TopRezultat.cs(68,38): warning CS0168: The variable 'tEx' is declared but never used
-11: Assets\Scripts\streznik\TopRezultat.cs(73,31): warning CS0168: The variable 'ex' is declared but never used
-12: Assets\Scripts\streznik\TopRezultat.cs(107,38): warning CS0168: The variable 'tEx' is declared but never used
-13: Assets\Scripts\streznik\TopRezultat.cs(112,31): warning CS0168: The variable 'ex' is declared but never used
-14: Assets\Scripts\streznik\TopRezultat.cs(145,38): warning CS0168: The variable 'tEx' is declared but never used
-15: Assets\Scripts\streznik\TopRezultat.cs(150,31): warning CS0168: The variable 'ex' is declared but never used
-16: Assets\Scripts\streznik\TopRezultat.cs(186,38): warning CS0168: The variable 'tEx' is declared but never used
-17: Assets\Scripts\streznik\TopRezultat.cs(191,31): warning CS0168: The variable 'ex' is declared but never used
-18: Assets\Scripts\streznik\Dosezki.cs(83,38): warning CS0168: The variable 'tEx' is declared but never used
-19: Assets\Scripts\streznik\Dosezki.cs(88,31): warning CS0168: The variable 'ex' is declared but never used
-20: Assets\Scripts\streznik\Dosezki.cs(123,38): warning CS0168: The variable 'tEx' is declared but never used
-21: Assets\Scripts\streznik\Dosezki.cs(128,31): warning CS0168: The variable 'ex' is declared but never used
-22: Assets\Scripts\streznik\Dosezki.cs(160,38): warning CS0168: The variable 'tEx' is declared but never used
-23: Assets\Scripts\streznik\Dosezki.cs(165,31): warning CS0168: The variable 'ex' is declared but never used
-24: Assets\Scripts\streznik\Dosezki.cs(213,38): warning CS0168: The variable 'tEx' is declared but never used
-25: Assets\Scripts\streznik\Dosezki.cs(218,31): warning CS0168: The variable 'ex' is declared but never used
-26: Assets\Scripts\streznik\Dosezki.cs(253,38): warning CS0168: The variable 'tEx' is declared but never used
-27: Assets\Scripts\streznik\Dosezki.cs(258,31): warning CS0168: The variable 'ex' is declared but never used
-28: Assets\Scripts\AchievementScript.cs(11,40): warning CS0649: Field 'AchievementScript.Achievements' is never assigned to, and will always have its default value null
-
-- PDB to MDB conversion --------------------------------------
-
-Process: E:\Workspaces\FERI\Razvoj in upravljanje programskih sistemov\projekt github\RIUPS Stack\CSharp60Support\Roslyn\pdb2mdb.exe
+Process: F:\My documents\Škola\Faks\7. Semestar\Razvoj in upravljanje programskih sistemov\Projekt\RIUPS-RIT-Gradecak-Tkalcevic\RIUPS Stack\CSharp60Support\Roslyn\pdb2mdb.exe
 Arguments: Temp\Assembly-CSharp.dll
 Exit code: 0
 Elapsed time: 0.15 sec
 
 - pdb2mdb.exe output (0 lines):
 ********************************************************************************
-*                     Monday, January 16, 2017 6:16:12 PM                      *
+*                     Monday, January 16, 2017 6:55:25 PM                      *
 ********************************************************************************
 CSharpCompilerWrapper.exe version: 2.0.0.0
 Platform: Windows
 Target assembly: Assembly-CSharp-Editor.dll
-Project directory: E:\Workspaces\FERI\Razvoj in upravljanje programskih sistemov\projekt github\RIUPS Stack
-Unity 'Data' or 'Frameworks' directory: D:/Unity/Editor/Data
+Project directory: F:\My documents\Škola\Faks\7. Semestar\Razvoj in upravljanje programskih sistemov\Projekt\RIUPS-RIT-Gradecak-Tkalcevic\RIUPS Stack
+Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
 Compiler: Microsoft C# 6.0
 
 - Compilation -----------------------------------------------
 
-Process: E:\Workspaces\FERI\Razvoj in upravljanje programskih sistemov\projekt github\RIUPS Stack\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"D:/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"D:/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"D:/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"D:/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-a16bb6a81aba4414f9b8ad82d4c37722 
+Process: F:\My documents\Škola\Faks\7. Semestar\Razvoj in upravljanje programskih sistemov\Projekt\RIUPS-RIT-Gradecak-Tkalcevic\RIUPS Stack\CSharp60Support\Roslyn\csc.exe
+Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-344212273838ccb4e89eca17a36e975a 
 Exit code: 0
-Elapsed time: 2.43 sec
+Elapsed time: 2.77 sec
 
 - Compiler output (0 lines):
 
@@ -340,28 +79,28 @@ Elapsed time: 2.43 sec
 
 - PDB to MDB conversion --------------------------------------
 
-Process: E:\Workspaces\FERI\Razvoj in upravljanje programskih sistemov\projekt github\RIUPS Stack\CSharp60Support\Roslyn\pdb2mdb.exe
+Process: F:\My documents\Škola\Faks\7. Semestar\Razvoj in upravljanje programskih sistemov\Projekt\RIUPS-RIT-Gradecak-Tkalcevic\RIUPS Stack\CSharp60Support\Roslyn\pdb2mdb.exe
 Arguments: Temp\Assembly-CSharp-Editor.dll
 Exit code: 0
-Elapsed time: 0.12 sec
+Elapsed time: 0.20 sec
 
 - pdb2mdb.exe output (0 lines):
 ********************************************************************************
-*                     Monday, January 16, 2017 6:17:57 PM                      *
+*                     Monday, January 16, 2017 6:57:41 PM                      *
 ********************************************************************************
 CSharpCompilerWrapper.exe version: 2.0.0.0
 Platform: Windows
 Target assembly: Assembly-CSharp.dll
-Project directory: E:\Workspaces\FERI\Razvoj in upravljanje programskih sistemov\projekt github\RIUPS Stack
-Unity 'Data' or 'Frameworks' directory: D:/Unity/Editor/Data
+Project directory: F:\My documents\Škola\Faks\7. Semestar\Razvoj in upravljanje programskih sistemov\Projekt\RIUPS-RIT-Gradecak-Tkalcevic\RIUPS Stack
+Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
 Compiler: Microsoft C# 6.0
 
 - Compilation -----------------------------------------------
 
-Process: E:\Workspaces\FERI\Razvoj in upravljanje programskih sistemov\projekt github\RIUPS Stack\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"D:/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"D:/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"D:/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"D:/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-40509ddaab084844d9c8311fdce9108f 
+Process: F:\My documents\Škola\Faks\7. Semestar\Razvoj in upravljanje programskih sistemov\Projekt\RIUPS-RIT-Gradecak-Tkalcevic\RIUPS Stack\CSharp60Support\Roslyn\csc.exe
+Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-6be89c61a136cf141b6c88ea80001ca3 
 Exit code: 0
-Elapsed time: 3.07 sec
+Elapsed time: 3.58 sec
 
 - Compiler output (0 lines):
 
@@ -382,10 +121,97 @@ Elapsed time: 3.07 sec
 13: Assets\Scripts\streznik\Dosezki.cs(165,31): warning CS0168: The variable 'ex' is declared but never used
 14: Assets\Scripts\streznik\Dosezki.cs(213,38): warning CS0168: The variable 'tEx' is declared but never used
 15: Assets\Scripts\streznik\Dosezki.cs(218,31): warning CS0168: The variable 'ex' is declared but never used
-16: Assets\Scripts\streznik\Uporabnik.cs(414,38): warning CS0168: The variable 'tEx' is declared but never used
-17: Assets\Scripts\streznik\Uporabnik.cs(419,31): warning CS0168: The variable 'ex' is declared but never used
-18: Assets\Scripts\streznik\Dosezki.cs(253,38): warning CS0168: The variable 'tEx' is declared but never used
-19: Assets\Scripts\streznik\Dosezki.cs(258,31): warning CS0168: The variable 'ex' is declared but never used
+16: Assets\Scripts\streznik\Dosezki.cs(253,38): warning CS0168: The variable 'tEx' is declared but never used
+17: Assets\Scripts\streznik\Dosezki.cs(258,31): warning CS0168: The variable 'ex' is declared but never used
+18: Assets\Scripts\streznik\TopRezultat.cs(68,38): warning CS0168: The variable 'tEx' is declared but never used
+19: Assets\Scripts\streznik\TopRezultat.cs(73,31): warning CS0168: The variable 'ex' is declared but never used
+20: Assets\Scripts\streznik\TopRezultat.cs(107,38): warning CS0168: The variable 'tEx' is declared but never used
+21: Assets\Scripts\streznik\TopRezultat.cs(112,31): warning CS0168: The variable 'ex' is declared but never used
+22: Assets\Scripts\streznik\TopRezultat.cs(145,38): warning CS0168: The variable 'tEx' is declared but never used
+23: Assets\Scripts\streznik\TopRezultat.cs(150,31): warning CS0168: The variable 'ex' is declared but never used
+24: Assets\Scripts\streznik\TopRezultat.cs(186,38): warning CS0168: The variable 'tEx' is declared but never used
+25: Assets\Scripts\streznik\TopRezultat.cs(191,31): warning CS0168: The variable 'ex' is declared but never used
+26: Assets\Scripts\streznik\Uporabnik.cs(414,38): warning CS0168: The variable 'tEx' is declared but never used
+27: Assets\Scripts\streznik\Uporabnik.cs(419,31): warning CS0168: The variable 'ex' is declared but never used
+28: Assets\Scripts\AchievementScript.cs(11,40): warning CS0649: Field 'AchievementScript.Achievements' is never assigned to, and will always have its default value null
+
+- PDB to MDB conversion --------------------------------------
+
+Process: F:\My documents\Škola\Faks\7. Semestar\Razvoj in upravljanje programskih sistemov\Projekt\RIUPS-RIT-Gradecak-Tkalcevic\RIUPS Stack\CSharp60Support\Roslyn\pdb2mdb.exe
+Arguments: Temp\Assembly-CSharp.dll
+Exit code: 0
+Elapsed time: 0.16 sec
+
+- pdb2mdb.exe output (0 lines):
+********************************************************************************
+*                     Monday, January 16, 2017 6:57:46 PM                      *
+********************************************************************************
+CSharpCompilerWrapper.exe version: 2.0.0.0
+Platform: Windows
+Target assembly: Assembly-CSharp-Editor.dll
+Project directory: F:\My documents\Škola\Faks\7. Semestar\Razvoj in upravljanje programskih sistemov\Projekt\RIUPS-RIT-Gradecak-Tkalcevic\RIUPS Stack
+Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
+Compiler: Microsoft C# 6.0
+
+- Compilation -----------------------------------------------
+
+Process: F:\My documents\Škola\Faks\7. Semestar\Razvoj in upravljanje programskih sistemov\Projekt\RIUPS-RIT-Gradecak-Tkalcevic\RIUPS Stack\CSharp60Support\Roslyn\csc.exe
+Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-3ea7ba52e69e0994fb8eaa0c76d9dbd3 
+Exit code: 0
+Elapsed time: 2.62 sec
+
+- Compiler output (0 lines):
+
+- Compiler errors (0 lines):
+
+- PDB to MDB conversion --------------------------------------
+
+Process: F:\My documents\Škola\Faks\7. Semestar\Razvoj in upravljanje programskih sistemov\Projekt\RIUPS-RIT-Gradecak-Tkalcevic\RIUPS Stack\CSharp60Support\Roslyn\pdb2mdb.exe
+Arguments: Temp\Assembly-CSharp-Editor.dll
+Exit code: 0
+Elapsed time: 0.14 sec
+
+- pdb2mdb.exe output (0 lines):
+********************************************************************************
+*                     Monday, January 16, 2017 6:58:26 PM                      *
+********************************************************************************
+CSharpCompilerWrapper.exe version: 2.0.0.0
+Platform: Windows
+Target assembly: Assembly-CSharp.dll
+Project directory: F:\My documents\Škola\Faks\7. Semestar\Razvoj in upravljanje programskih sistemov\Projekt\RIUPS-RIT-Gradecak-Tkalcevic\RIUPS Stack
+Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
+Compiler: Microsoft C# 6.0
+
+- Compilation -----------------------------------------------
+
+Process: F:\My documents\Škola\Faks\7. Semestar\Razvoj in upravljanje programskih sistemov\Projekt\RIUPS-RIT-Gradecak-Tkalcevic\RIUPS Stack\CSharp60Support\Roslyn\csc.exe
+Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-fe15b3d192e1c5a4e91a008ea43fe2e3 
+Exit code: 0
+Elapsed time: 3.40 sec
+
+- Compiler output (0 lines):
+
+- Compiler errors (29 lines):
+0: Assets\Scripts\streznik\Uporabnik.cs(98,38): warning CS0168: The variable 'tEx' is declared but never used
+1: Assets\Scripts\streznik\Uporabnik.cs(103,31): warning CS0168: The variable 'ex' is declared but never used
+2: Assets\Scripts\streznik\Uporabnik.cs(145,42): warning CS0168: The variable 'tEx' is declared but never used
+3: Assets\Scripts\streznik\Uporabnik.cs(150,35): warning CS0168: The variable 'ex' is declared but never used
+4: Assets\Scripts\streznik\Uporabnik.cs(201,38): warning CS0168: The variable 'tEx' is declared but never used
+5: Assets\Scripts\streznik\Uporabnik.cs(206,31): warning CS0168: The variable 'ex' is declared but never used
+6: Assets\Scripts\streznik\Uporabnik.cs(239,38): warning CS0168: The variable 'tEx' is declared but never used
+7: Assets\Scripts\streznik\Uporabnik.cs(244,31): warning CS0168: The variable 'ex' is declared but never used
+8: Assets\Scripts\streznik\Dosezki.cs(83,38): warning CS0168: The variable 'tEx' is declared but never used
+9: Assets\Scripts\streznik\Dosezki.cs(88,31): warning CS0168: The variable 'ex' is declared but never used
+10: Assets\Scripts\streznik\Dosezki.cs(123,38): warning CS0168: The variable 'tEx' is declared but never used
+11: Assets\Scripts\streznik\Dosezki.cs(128,31): warning CS0168: The variable 'ex' is declared but never used
+12: Assets\Scripts\streznik\Dosezki.cs(160,38): warning CS0168: The variable 'tEx' is declared but never used
+13: Assets\Scripts\streznik\Dosezki.cs(165,31): warning CS0168: The variable 'ex' is declared but never used
+14: Assets\Scripts\streznik\Dosezki.cs(213,38): warning CS0168: The variable 'tEx' is declared but never used
+15: Assets\Scripts\streznik\Dosezki.cs(218,31): warning CS0168: The variable 'ex' is declared but never used
+16: Assets\Scripts\streznik\Dosezki.cs(253,38): warning CS0168: The variable 'tEx' is declared but never used
+17: Assets\Scripts\streznik\Dosezki.cs(258,31): warning CS0168: The variable 'ex' is declared but never used
+18: Assets\Scripts\streznik\Uporabnik.cs(414,38): warning CS0168: The variable 'tEx' is declared but never used
+19: Assets\Scripts\streznik\Uporabnik.cs(419,31): warning CS0168: The variable 'ex' is declared but never used
 20: Assets\Scripts\streznik\TopRezultat.cs(68,38): warning CS0168: The variable 'tEx' is declared but never used
 21: Assets\Scripts\streznik\TopRezultat.cs(73,31): warning CS0168: The variable 'ex' is declared but never used
 22: Assets\Scripts\streznik\TopRezultat.cs(107,38): warning CS0168: The variable 'tEx' is declared but never used
@@ -398,28 +224,28 @@ Elapsed time: 3.07 sec
 
 - PDB to MDB conversion --------------------------------------
 
-Process: E:\Workspaces\FERI\Razvoj in upravljanje programskih sistemov\projekt github\RIUPS Stack\CSharp60Support\Roslyn\pdb2mdb.exe
+Process: F:\My documents\Škola\Faks\7. Semestar\Razvoj in upravljanje programskih sistemov\Projekt\RIUPS-RIT-Gradecak-Tkalcevic\RIUPS Stack\CSharp60Support\Roslyn\pdb2mdb.exe
 Arguments: Temp\Assembly-CSharp.dll
 Exit code: 0
-Elapsed time: 0.20 sec
+Elapsed time: 0.16 sec
 
 - pdb2mdb.exe output (0 lines):
 ********************************************************************************
-*                     Monday, January 16, 2017 6:18:01 PM                      *
+*                     Monday, January 16, 2017 6:58:31 PM                      *
 ********************************************************************************
 CSharpCompilerWrapper.exe version: 2.0.0.0
 Platform: Windows
 Target assembly: Assembly-CSharp-Editor.dll
-Project directory: E:\Workspaces\FERI\Razvoj in upravljanje programskih sistemov\projekt github\RIUPS Stack
-Unity 'Data' or 'Frameworks' directory: D:/Unity/Editor/Data
+Project directory: F:\My documents\Škola\Faks\7. Semestar\Razvoj in upravljanje programskih sistemov\Projekt\RIUPS-RIT-Gradecak-Tkalcevic\RIUPS Stack
+Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
 Compiler: Microsoft C# 6.0
 
 - Compilation -----------------------------------------------
 
-Process: E:\Workspaces\FERI\Razvoj in upravljanje programskih sistemov\projekt github\RIUPS Stack\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"D:/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"D:/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"D:/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"D:/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-40cc9f12efbbf6c458d62502d47dd4a3 
+Process: F:\My documents\Škola\Faks\7. Semestar\Razvoj in upravljanje programskih sistemov\Projekt\RIUPS-RIT-Gradecak-Tkalcevic\RIUPS Stack\CSharp60Support\Roslyn\csc.exe
+Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-015e0510af396bb49950a02b745f3004 
 Exit code: 0
-Elapsed time: 2.36 sec
+Elapsed time: 2.76 sec
 
 - Compiler output (0 lines):
 
@@ -427,9 +253,96 @@ Elapsed time: 2.36 sec
 
 - PDB to MDB conversion --------------------------------------
 
-Process: E:\Workspaces\FERI\Razvoj in upravljanje programskih sistemov\projekt github\RIUPS Stack\CSharp60Support\Roslyn\pdb2mdb.exe
+Process: F:\My documents\Škola\Faks\7. Semestar\Razvoj in upravljanje programskih sistemov\Projekt\RIUPS-RIT-Gradecak-Tkalcevic\RIUPS Stack\CSharp60Support\Roslyn\pdb2mdb.exe
 Arguments: Temp\Assembly-CSharp-Editor.dll
 Exit code: 0
-Elapsed time: 0.19 sec
+Elapsed time: 0.15 sec
+
+- pdb2mdb.exe output (0 lines):
+********************************************************************************
+*                     Monday, January 16, 2017 6:59:11 PM                      *
+********************************************************************************
+CSharpCompilerWrapper.exe version: 2.0.0.0
+Platform: Windows
+Target assembly: Assembly-CSharp.dll
+Project directory: F:\My documents\Škola\Faks\7. Semestar\Razvoj in upravljanje programskih sistemov\Projekt\RIUPS-RIT-Gradecak-Tkalcevic\RIUPS Stack
+Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
+Compiler: Microsoft C# 6.0
+
+- Compilation -----------------------------------------------
+
+Process: F:\My documents\Škola\Faks\7. Semestar\Razvoj in upravljanje programskih sistemov\Projekt\RIUPS-RIT-Gradecak-Tkalcevic\RIUPS Stack\CSharp60Support\Roslyn\csc.exe
+Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-aa0c875683550234b815bd07b157b9e5 
+Exit code: 0
+Elapsed time: 2.90 sec
+
+- Compiler output (0 lines):
+
+- Compiler errors (29 lines):
+0: Assets\Scripts\streznik\Uporabnik.cs(98,38): warning CS0168: The variable 'tEx' is declared but never used
+1: Assets\Scripts\streznik\Uporabnik.cs(103,31): warning CS0168: The variable 'ex' is declared but never used
+2: Assets\Scripts\streznik\Uporabnik.cs(145,42): warning CS0168: The variable 'tEx' is declared but never used
+3: Assets\Scripts\streznik\Uporabnik.cs(150,35): warning CS0168: The variable 'ex' is declared but never used
+4: Assets\Scripts\streznik\Dosezki.cs(83,38): warning CS0168: The variable 'tEx' is declared but never used
+5: Assets\Scripts\streznik\Dosezki.cs(88,31): warning CS0168: The variable 'ex' is declared but never used
+6: Assets\Scripts\streznik\Dosezki.cs(123,38): warning CS0168: The variable 'tEx' is declared but never used
+7: Assets\Scripts\streznik\Dosezki.cs(128,31): warning CS0168: The variable 'ex' is declared but never used
+8: Assets\Scripts\streznik\Dosezki.cs(160,38): warning CS0168: The variable 'tEx' is declared but never used
+9: Assets\Scripts\streznik\Dosezki.cs(165,31): warning CS0168: The variable 'ex' is declared but never used
+10: Assets\Scripts\streznik\Dosezki.cs(213,38): warning CS0168: The variable 'tEx' is declared but never used
+11: Assets\Scripts\streznik\Dosezki.cs(218,31): warning CS0168: The variable 'ex' is declared but never used
+12: Assets\Scripts\streznik\Dosezki.cs(253,38): warning CS0168: The variable 'tEx' is declared but never used
+13: Assets\Scripts\streznik\Dosezki.cs(258,31): warning CS0168: The variable 'ex' is declared but never used
+14: Assets\Scripts\streznik\Uporabnik.cs(201,38): warning CS0168: The variable 'tEx' is declared but never used
+15: Assets\Scripts\streznik\Uporabnik.cs(206,31): warning CS0168: The variable 'ex' is declared but never used
+16: Assets\Scripts\streznik\Uporabnik.cs(239,38): warning CS0168: The variable 'tEx' is declared but never used
+17: Assets\Scripts\streznik\Uporabnik.cs(244,31): warning CS0168: The variable 'ex' is declared but never used
+18: Assets\Scripts\streznik\Uporabnik.cs(414,38): warning CS0168: The variable 'tEx' is declared but never used
+19: Assets\Scripts\streznik\Uporabnik.cs(419,31): warning CS0168: The variable 'ex' is declared but never used
+20: Assets\Scripts\streznik\TopRezultat.cs(68,38): warning CS0168: The variable 'tEx' is declared but never used
+21: Assets\Scripts\streznik\TopRezultat.cs(73,31): warning CS0168: The variable 'ex' is declared but never used
+22: Assets\Scripts\streznik\TopRezultat.cs(107,38): warning CS0168: The variable 'tEx' is declared but never used
+23: Assets\Scripts\streznik\TopRezultat.cs(112,31): warning CS0168: The variable 'ex' is declared but never used
+24: Assets\Scripts\streznik\TopRezultat.cs(145,38): warning CS0168: The variable 'tEx' is declared but never used
+25: Assets\Scripts\streznik\TopRezultat.cs(150,31): warning CS0168: The variable 'ex' is declared but never used
+26: Assets\Scripts\streznik\TopRezultat.cs(186,38): warning CS0168: The variable 'tEx' is declared but never used
+27: Assets\Scripts\streznik\TopRezultat.cs(191,31): warning CS0168: The variable 'ex' is declared but never used
+28: Assets\Scripts\AchievementScript.cs(11,40): warning CS0649: Field 'AchievementScript.Achievements' is never assigned to, and will always have its default value null
+
+- PDB to MDB conversion --------------------------------------
+
+Process: F:\My documents\Škola\Faks\7. Semestar\Razvoj in upravljanje programskih sistemov\Projekt\RIUPS-RIT-Gradecak-Tkalcevic\RIUPS Stack\CSharp60Support\Roslyn\pdb2mdb.exe
+Arguments: Temp\Assembly-CSharp.dll
+Exit code: 0
+Elapsed time: 0.15 sec
+
+- pdb2mdb.exe output (0 lines):
+********************************************************************************
+*                     Monday, January 16, 2017 6:59:15 PM                      *
+********************************************************************************
+CSharpCompilerWrapper.exe version: 2.0.0.0
+Platform: Windows
+Target assembly: Assembly-CSharp-Editor.dll
+Project directory: F:\My documents\Škola\Faks\7. Semestar\Razvoj in upravljanje programskih sistemov\Projekt\RIUPS-RIT-Gradecak-Tkalcevic\RIUPS Stack
+Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
+Compiler: Microsoft C# 6.0
+
+- Compilation -----------------------------------------------
+
+Process: F:\My documents\Škola\Faks\7. Semestar\Razvoj in upravljanje programskih sistemov\Projekt\RIUPS-RIT-Gradecak-Tkalcevic\RIUPS Stack\CSharp60Support\Roslyn\csc.exe
+Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-941dd71907a7977459c355359c9f1b0a 
+Exit code: 0
+Elapsed time: 2.54 sec
+
+- Compiler output (0 lines):
+
+- Compiler errors (0 lines):
+
+- PDB to MDB conversion --------------------------------------
+
+Process: F:\My documents\Škola\Faks\7. Semestar\Razvoj in upravljanje programskih sistemov\Projekt\RIUPS-RIT-Gradecak-Tkalcevic\RIUPS Stack\CSharp60Support\Roslyn\pdb2mdb.exe
+Arguments: Temp\Assembly-CSharp-Editor.dll
+Exit code: 0
+Elapsed time: 0.13 sec
 
 - pdb2mdb.exe output (0 lines):

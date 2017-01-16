@@ -185,7 +185,7 @@ namespace StackClone
             SqlCommand cmd = new SqlCommand();
 
             string where = "1 = 1 ";
-            where += (idUporabnika != -1) ? ("AND (UporabnikId = " + idUporabnika + ") ") : ("");
+            where += (idUporabnika != -1) ? ("AND (IdUporabnika = " + idUporabnika + ") ") : ("");
 
             string from = "[StackDB].[dbo].[tblDosezkiUporabnikov]";
             //                           0             1
