@@ -87,8 +87,6 @@ public class LoginRegisterScript : MonoBehaviour {
                 GameObject.Find("UserStuff").GetComponent<UserInfoScript>().Username = uporabnik.Uporabnisko;
                 GameObject.Find("UserStuff").GetComponent<UserInfoScript>().userID = uporabnik.Id;
 
-                Manager.Current.User = uporabnik;
-
                 SceneManager.LoadScene( "main menu" );
             }
         }
@@ -146,11 +144,6 @@ public class LoginRegisterScript : MonoBehaviour {
         loginCanvas.SetActive( false );
     }
 
-}
-
-public class Manager : Singleton<Manager>
-{
-    public Uporabnik User = new Uporabnik();
 }
 
 

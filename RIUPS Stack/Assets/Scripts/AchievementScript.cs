@@ -9,23 +9,31 @@ public class AchievementScript : MonoBehaviour {
 
     public GameObject MenuTab;
     private AchievementElementScript[] Achievements;
+    private List<int> AchievementIDs = new List<int>();
 
     // Use this for initialization
     void Awake () {
-
-        
+                
+        //AchievementIDs = Dosezek.UporabnikMaDosezek(GameObject.Find("UserStuff").GetComponent<UserInfoScript>().userID);
 
         //Achievements = new AchievementElementScript[5];
+    }
+
+    public void GetAchievementsForUser() {
+        AchievementIDs = Dosezek.UporabnikMaDosezek(GameObject.Find("UserStuff").GetComponent<UserInfoScript>().userID);
+        foreach (var item in AchievementIDs) {
+            Debug.Log(AchievementIDs);
+        }
     }
 
     public void MainMenuAchievements() {
 
         List<Dosezek> AchievementsList = new List<Dosezek>();
-        AchievementsList = Dosezek.Brskaj("", -1, -1, Manager.Current.User.Id);
+        AchievementsList = Dosezek.Brskaj();
 
         // ili ovak
-        List<int> AchievementIDs = new List<int>();
-        AchievementIDs = Dosezek.UporabnikMaDosezek( Manager.Current.User.Id );
+        //List<int> AchievementIDs = new List<int>();
+        AchievementIDs = Dosezek.UporabnikMaDosezek(GameObject.Find("UserStuff").GetComponent<UserInfoScript>().userID);
 
         int counter = 0;
         foreach (var item in AchievementsList) {
@@ -35,7 +43,7 @@ public class AchievementScript : MonoBehaviour {
             AchievementTab.transform.FindChild("Title").GetComponent<Text>().text = item.Naziv;
             AchievementTab.transform.FindChild("Description").GetComponent<Text>().text = item.Opis;
             /*
-            if (Achievements[counter].status) {
+            if (AchievementIDs.Count != 0 && AchievementIDs.Contains(item.Id)) {
                 AchievementTab.transform.FindChild("StatusImage").gameObject.SetActive(true);
             }
             */
@@ -43,25 +51,27 @@ public class AchievementScript : MonoBehaviour {
             counter++;
         }
     }
+    // od 4 do 8
+    public void GameplayAchievements(int count, int combo) {   
 
-    public void GameplayAchievements(int count, int combo) {
         switch (count) {
             case 0:
                 if (!Achievements[3].status) {
                     Achievements[3].status = true;
-                    UnlockShow(Achievements[3]);
+                    //UnlockShow(Achievements[3]);
                 }
                 break;
             case 10:
-                if (!Achievements[0].status) {
-                    Achievements[0].status = true;
-                    UnlockShow(Achievements[0]);
+                if (!AchievementIDs.Contains(4)) {
+                    Dosezek.DodajDosezekUporabnika(GameObject.Find("UserStuff").GetComponent<UserInfoScript>().userID, 4);
+                    List<Dosezek> unlock = Dosezek.Brskaj("", 4);
+                    UnlockShow(unlock.Find(x => x.Id == 4));
                 }
                 break;
             case 100:
                 if (!Achievements[1].status) {
                     Achievements[1].status = true;
-                    UnlockShow(Achievements[1]);
+                    //UnlockShow(Achievements[1]);
                 }
                 break;
         }
@@ -70,23 +80,23 @@ public class AchievementScript : MonoBehaviour {
             case 10:
                 if (!Achievements[2].status) {
                     Achievements[2].status = true;
-                    UnlockShow(Achievements[2]);
+                    //UnlockShow(Achievements[2]);
                 }
                 break;
             case 5:
                 if (!Achievements[4].status) {
                     Achievements[4].status = true;
-                    UnlockShow(Achievements[4]);
+                    //UnlockShow(Achievements[4]);
                 }
                 break;
         }
     }
 
-    void UnlockShow(AchievementElementScript unlockedAchievement) {
+    void UnlockShow(Dosezek unlocked) {
 
         GameObject unlockTab = GameObject.Find("AchievementUnlocked");
 
-        unlockTab.transform.FindChild("Title").GetComponent<Text>().text = unlockedAchievement.title;
+        unlockTab.transform.FindChild("Title").GetComponent<Text>().text = unlocked.Naziv;
         unlockTab.GetComponent<Animator>().Play("AchievementUnlockAnim");
     }
 

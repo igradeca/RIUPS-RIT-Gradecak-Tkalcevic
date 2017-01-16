@@ -21,6 +21,8 @@ public class TheStack : MonoBehaviour {
         comboCount = 0;
         isGameOver = false;
 
+        GameObject.Find("UserStuff").GetComponent<AchievementScript>().GetAchievementsForUser();
+
         InstantiateTile();
 	}
 
@@ -32,7 +34,7 @@ public class TheStack : MonoBehaviour {
                 if (scoreCount >= 12) {
                     RemoveLowestTile();
                 }
-                GameObject.Find("Achievements(Clone)").GetComponent<AchievementScript>().GameplayAchievements(scoreCount, comboCount);
+                GameObject.Find("UserStuff").GetComponent<AchievementScript>().GameplayAchievements(scoreCount, comboCount);
             }
         }
 

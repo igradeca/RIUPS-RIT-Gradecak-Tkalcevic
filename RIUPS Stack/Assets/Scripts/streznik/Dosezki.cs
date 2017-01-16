@@ -31,12 +31,13 @@ namespace StackClone
         /// <param name="nagradaMin">donja granica vrednosti nagrade</param>
         /// <param name="nagradaMax">zgornja granica vrednosti nagrade</param>
         /// <returns>seznam dosezkov</returns>
-        public static List<Dosezek> Brskaj( string naziv = "", int nagradaMin = -1, int nagradaMax = -1, int idUporabnika = -1, string uporabnisko = "" )
+        public static List<Dosezek> Brskaj( string naziv = "", int Id = -1, int nagradaMin = -1, int nagradaMax = -1, int idUporabnika = -1, string uporabnisko = "" )
         {
             SqlConnection con = new SqlConnection( Nastavitve.GetConnectionString() );
             SqlCommand cmd = new SqlCommand();
 
             string where = "1 = 1 ";
+            where += (Id != -1) ? ("AND (Id = " + Id + ") ") : ("");
             where += (naziv.Trim() != "") ? ("AND (Naziv = '" + naziv + "') ") : ("");
             where += (nagradaMin != -1) ? ("AND (Nagrada > " + nagradaMin + ") ") : ("");
             where += (nagradaMax != -1) ? ("AND (Nagrada < " + nagradaMax + ") ") : ("");
