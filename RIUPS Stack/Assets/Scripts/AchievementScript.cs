@@ -20,10 +20,12 @@ public class AchievementScript : MonoBehaviour {
     }
 
     public void GetAchievementsForUser() {
-        AchievementIDs = Dosezek.UporabnikMaDosezek(GameObject.Find("UserStuff").GetComponent<UserInfoScript>().userID);
-        foreach (var item in AchievementIDs) {
-            Debug.Log(AchievementIDs);
-        }
+        if (GameObject.Find("UserStuff").GetComponent<UserInfoScript>().userID != 0) {
+            AchievementIDs = Dosezek.UporabnikMaDosezek(GameObject.Find("UserStuff").GetComponent<UserInfoScript>().userID);
+            foreach (var item in AchievementIDs) {
+                Debug.Log(AchievementIDs);
+            }
+        }        
     }
 
     public void MainMenuAchievements() {
@@ -31,8 +33,6 @@ public class AchievementScript : MonoBehaviour {
         List<Dosezek> AchievementsList = new List<Dosezek>();
         AchievementsList = Dosezek.Brskaj();
 
-        // ili ovak
-        //List<int> AchievementIDs = new List<int>();
         AchievementIDs = Dosezek.UporabnikMaDosezek(GameObject.Find("UserStuff").GetComponent<UserInfoScript>().userID);
 
         int counter = 0;

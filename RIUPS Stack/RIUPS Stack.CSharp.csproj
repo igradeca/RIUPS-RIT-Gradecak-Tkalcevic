@@ -87,16 +87,19 @@
     <Compile Include="Assets\CSharp vNext Support\FormattableString\FormattableStringFactory.cs" />
     <Compile Include="Assets\Scripts\AchievementElementScript.cs" />
     <Compile Include="Assets\Scripts\AchievementScript.cs" />
+    <Compile Include="Assets\Scripts\ColourElementScript.cs" />
+    <Compile Include="Assets\Scripts\ColoursScript.cs" />
     <Compile Include="Assets\Scripts\GameScript.cs" />
     <Compile Include="Assets\Scripts\HighscoreScript.cs" />
     <Compile Include="Assets\Scripts\LoginRegisterScript.cs" />
     <Compile Include="Assets\Scripts\MainMenuScript.cs" />
-    <Compile Include="Assets\Scripts\streznik\ShopItem.cs" />
+    <Compile Include="Assets\Scripts\ShopScript.cs" />
     <Compile Include="Assets\Scripts\TheStack.cs" />
     <Compile Include="Assets\Scripts\TileScript.cs" />
     <Compile Include="Assets\Scripts\UserInfoScript.cs" />
     <Compile Include="Assets\Scripts\streznik\Dosezki.cs" />
     <Compile Include="Assets\Scripts\streznik\Nastavitve.cs" />
+    <Compile Include="Assets\Scripts\streznik\ShopItem.cs" />
     <Compile Include="Assets\Scripts\streznik\TopRezultat.cs" />
     <Compile Include="Assets\Scripts\streznik\Uporabnik.cs" />
   </ItemGroup>

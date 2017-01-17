@@ -8,6 +8,7 @@ public class GameScript : MonoBehaviour {
     public GameObject gameStopCanvas;
     public GameObject pauseButton;
     public TheStack stackHimself;
+    public GameObject coinsText;
 
 	// Use this for initialization
 	void Start () {
@@ -32,11 +33,20 @@ public class GameScript : MonoBehaviour {
         int userId = GameObject.Find("UserStuff").GetComponent<UserInfoScript>().userID;
         int scoreCount = GameObject.Find("TheStack").GetComponent<TheStack>().scoreCount;
         if (GameObject.Find("Main Camera").GetComponent<HighscoreScript>().CheckHighscore(userId, scoreCount)) {
-            GameObject.Find("GameStoppedText").GetComponent<Text>().text = "GAME OVER\nNEW HIGHSCORE!";
+            GameObject.Find("GameStoppedText").GetComponent<Text>().text = "GAME OVER\nNEW HIGHSCORE!";  
         } else {
             GameObject.Find("GameStoppedText").GetComponent<Text>().text = "GAME OVER";
-        }   
-             
+        }
+
+        int coins = Mathf.FloorToInt(scoreCount / 10);
+        coinsText.GetComponent<Text>().text = "COINS EARNED: " + coins;
+        coinsText.SetActive(true);
+        if (coins > 0) {
+            GameObject.Find("UserStuff").GetComponent<UserInfoScript>().coins += coins;
+            coins = GameObject.Find("UserStuff").GetComponent<UserInfoScript>().coins;
+            GameObject.Find("UserStuff").GetComponent<ShopScript>().UpdateCoins(coins);
+        }        
+
         GameObject.Find("ResumeButton").SetActive(false);
     }
          

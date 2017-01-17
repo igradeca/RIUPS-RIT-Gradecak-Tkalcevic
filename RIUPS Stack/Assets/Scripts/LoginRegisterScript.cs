@@ -25,17 +25,6 @@ public class LoginRegisterScript : MonoBehaviour {
     public Text regUsername;
     public InputField regPassword;
     public Text errorText;
-    
-
-    // Use this for initialization
-    void Start () {
-        	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 
     public void LoginPanelBtnClick()
     {
@@ -85,12 +74,16 @@ public class LoginRegisterScript : MonoBehaviour {
             else if ( passwordValid )
             {
                 Instantiate(loginUserInfo);
-                GameObject.Find("UserStuff").GetComponent<UserInfoScript>().Username = uporabnik.Uporabnisko;
-                GameObject.Find("UserStuff").GetComponent<UserInfoScript>().userID = uporabnik.Id;
-
+                FillUserStuff(uporabnik.Id, uporabnik.Uporabnisko, uporabnik.Kovanc);
                 SceneManager.LoadScene( "main menu" );
             }
         }
+    }
+
+    private void FillUserStuff(int id, string username, int coins) {
+        GameObject.Find("UserStuff").GetComponent<UserInfoScript>().userID = id;
+        GameObject.Find("UserStuff").GetComponent<UserInfoScript>().Username = username;
+        GameObject.Find("UserStuff").GetComponent<UserInfoScript>().coins = coins;
     }
 
     public void RegisterBtnClick()
@@ -131,6 +124,10 @@ public class LoginRegisterScript : MonoBehaviour {
             }
             
         }
+    }
+
+    public void OfflineModeClick() {
+        SceneManager.LoadScene("main menu");
     }
 
     public void ErrorBtnClick()

@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenuScript : MonoBehaviour {
 
@@ -10,16 +11,24 @@ public class MainMenuScript : MonoBehaviour {
 
     public GameObject HighscoreCanvas;
     public GameObject ShopCanvas;
+    public ShopScript ShopStuff;
 
-    // Use this for initialization
-    void Start () {
-        
-    }
-
-    public void StartScene(int sceneNumber) {
+    void Start() {
         if (!GameObject.Find("UserStuff")) {
             Instantiate(DontDestroyStuffObject);
         }
+        if (GameObject.Find("UserStuff").GetComponent<UserInfoScript>().userID == 0) {
+            GameObject.Find("AchievementsButton").SetActive(false);
+            GameObject.Find("HighscoreButton").SetActive(false);
+            GameObject.Find("ShopButton").SetActive(false);
+        } else {
+            GameObject.Find("UsernameText").GetComponent<Text>().text = GameObject.Find("UserStuff").GetComponent<UserInfoScript>().Username;
+        }
+
+    }
+
+    public void StartScene(int sceneNumber) {
+        
         SceneManager.LoadScene(sceneNumber);
     }
 
@@ -38,6 +47,7 @@ public class MainMenuScript : MonoBehaviour {
                     break;
                 case 3:
                     ShopCanvas.SetActive(true);
+                    ShopStuff.ShowShopItems();
                     break;
             }
 

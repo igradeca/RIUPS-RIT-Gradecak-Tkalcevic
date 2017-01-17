@@ -26,14 +26,16 @@ public class HighscoreScript : MonoBehaviour {
 
     public bool CheckHighscore(int userId, int score) {
 
-        List<TopRezultat> playersList = new List<TopRezultat>();
-        playersList = TopRezultat.GetTopRezultati(10);
+        if (GameObject.Find("UserStuff").GetComponent<UserInfoScript>().userID != 0) {
+            List<TopRezultat> playersList = new List<TopRezultat>();
+            playersList = TopRezultat.GetTopRezultati(10);
 
-        if (score > playersList[playersList.Count - 1].Rezultat) {
-            TopRezultat.Dodaj(userId, score);
-            TopRezultat.BrisanjeSlabih(10);
-            return true;
-        }
+            if (score > playersList[playersList.Count - 1].Rezultat) {
+                TopRezultat.Dodaj(userId, score);
+                TopRezultat.BrisanjeSlabih(10);
+                return true;
+            }
+        }        
         return false;
     }
 

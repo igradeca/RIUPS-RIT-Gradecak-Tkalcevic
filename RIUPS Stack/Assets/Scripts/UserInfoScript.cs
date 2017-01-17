@@ -7,6 +7,7 @@ public class UserInfoScript : MonoBehaviour {
 
     public string Username;
     public int userID;
+    public int coins;
 
 	// Use this for initialization
 	void Awake () {
