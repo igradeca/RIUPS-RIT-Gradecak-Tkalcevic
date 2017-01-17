@@ -18,18 +18,18 @@ public class LoginRegisterScript : MonoBehaviour {
     public GameObject loginUserInfo;
 
     public Text username;
-    public Text password;
+    public InputField password;
     public Text regName;
     public Text regLastName;
     public Text regEmail;
     public Text regUsername;
-    public Text regPassword;
+    public InputField regPassword;
     public Text errorText;
     
 
     // Use this for initialization
     void Start () {
-	
+        	
 	}
 	
 	// Update is called once per frame
@@ -59,6 +59,7 @@ public class LoginRegisterScript : MonoBehaviour {
         }
         else
         {
+            Debug.Log(password.text);
             List<Uporabnik> uporabnikList = Uporabnik.Brskaj( -1, username.text );
             if (uporabnikList == null)
             {
