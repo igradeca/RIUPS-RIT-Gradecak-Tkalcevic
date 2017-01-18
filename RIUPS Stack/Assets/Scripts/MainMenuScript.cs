@@ -47,8 +47,7 @@ public class MainMenuScript : MonoBehaviour {
                     break;
                 case 3:
                     ShopCanvas.SetActive(true);
-                    ShopStuff.ShowShopItems();
-                    ShopStuff.dodajArtikle();
+                    LoadShop();
                     ShopStuff.SetColoursToBuy();
                     break;
             }
@@ -80,6 +79,12 @@ public class MainMenuScript : MonoBehaviour {
             GameObject.Find("UserStuff").GetComponent<AchievementScript>().MainMenuAchievements();
         } else if (GameObject.Find("AchievementList").transform.childCount == 0) {
             GameObject.Find("UserStuff").GetComponent<AchievementScript>().MainMenuAchievements();
+        }
+    }
+
+    void LoadShop() {
+        if (GameObject.Find("ShopPanel").transform.childCount == 0) {
+            ShopStuff.ShowShopItems();
         }
     }
 

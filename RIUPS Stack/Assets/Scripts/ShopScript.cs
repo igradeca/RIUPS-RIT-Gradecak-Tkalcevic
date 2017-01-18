@@ -8,6 +8,8 @@ using System.Linq;
 public class ShopScript : MonoBehaviour {
 
     public GameObject ColoursToBuy;
+    public GameObject ShopItemPrefab;
+    public Color32 bojabogati;
 
 	// Use this for initialization
 	void Start () {
@@ -26,9 +28,20 @@ public class ShopScript : MonoBehaviour {
         UsersCoins();
         List<ShopItem> shopItems = new List<ShopItem>();
         shopItems = ShopItem.Brskaj();
+        Instantiate(ColoursToBuy);
 
+        int counter = 0;
         foreach (var item in shopItems) {
-            Debug.Log(item.Id + " " + item.Naziv);
+            GameObject shopItemInst = Instantiate(ShopItemPrefab) as GameObject;     
+            shopItemInst.name = item.Naziv;
+            shopItemInst.transform.SetParent(GameObject.Find("ShopPanel").transform, false);
+            shopItemInst.transform.FindChild("ShopItemText").GetComponent<Text>().text = item.Naziv;
+            Color32 mojaColor = GameObject.Find("ColoursToBuy(Clone)").transform.FindChild(item.Naziv).GetComponent<ColourElementScript>().coloursPallette[0];
+            Debug.Log(mojaColor);
+            shopItemInst.GetComponent<RawImage>().color = mojaColor;
+            shopItemInst.transform.localPosition -= new Vector3(0.0f, (90 * counter), 0.0f);
+
+            counter++;
         }
     }
 
@@ -45,33 +58,6 @@ public class ShopScript : MonoBehaviour {
         user[0].Kovanc = coins;
 
         Uporabnik.Update(user[0]);
-    }
-
-    public void dodajArtikle() {
-
-        List<string> existing = ShopItem.Brskaj().Select( x => x.Naziv ).ToList();
-
-        ShopItem item1 = new ShopItem();
-        ShopItem item2 = new ShopItem();
-        ShopItem item3 = new ShopItem();
-
-        item1.Naziv = "Le Classic";
-        item2.Naziv = "Red";
-        item3.Naziv = "Grasshopper";
-
-        if (!existing.Contains(item1.Naziv))
-            ShopItem.Dodaj(item1);
-        if ( !existing.Contains( item2.Naziv ) )
-            ShopItem.Dodaj(item2);
-        if ( !existing.Contains( item3.Naziv ) )
-            ShopItem.Dodaj(item3);
-
-        List<ShopItem> items = new List<ShopItem>();
-        items = ShopItem.Brskaj();
-
-        foreach (var item in items) {
-            Debug.Log(item.Id + " " + item.Naziv);
-        }
     }
 
 }
