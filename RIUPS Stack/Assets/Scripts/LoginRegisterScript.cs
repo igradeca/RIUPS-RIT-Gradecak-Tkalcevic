@@ -48,7 +48,6 @@ public class LoginRegisterScript : MonoBehaviour {
         }
         else
         {
-            Debug.Log(password.text);
             List<Uporabnik> uporabnikList = Uporabnik.Brskaj( -1, username.text );
             if (uporabnikList == null)
             {

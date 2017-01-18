@@ -48,6 +48,8 @@ public class MainMenuScript : MonoBehaviour {
                 case 3:
                     ShopCanvas.SetActive(true);
                     ShopStuff.ShowShopItems();
+                    ShopStuff.dodajArtikle();
+                    ShopStuff.SetColoursToBuy();
                     break;
             }
 
