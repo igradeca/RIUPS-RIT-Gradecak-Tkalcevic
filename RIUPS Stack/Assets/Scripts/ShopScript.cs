@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using StackClone;
 using UnityEngine.UI;
+using System.Linq;
 
 public class ShopScript : MonoBehaviour {
 
@@ -48,6 +49,8 @@ public class ShopScript : MonoBehaviour {
 
     public void dodajArtikle() {
 
+        List<string> existing = ShopItem.Brskaj().Select( x => x.Naziv ).ToList();
+
         ShopItem item1 = new ShopItem();
         ShopItem item2 = new ShopItem();
         ShopItem item3 = new ShopItem();
@@ -56,9 +59,12 @@ public class ShopScript : MonoBehaviour {
         item2.Naziv = "Red";
         item3.Naziv = "Grasshopper";
 
-        ShopItem.Dodaj(item1);
-        ShopItem.Dodaj(item2);
-        ShopItem.Dodaj(item3);
+        if (!existing.Contains(item1.Naziv))
+            ShopItem.Dodaj(item1);
+        if ( !existing.Contains( item2.Naziv ) )
+            ShopItem.Dodaj(item2);
+        if ( !existing.Contains( item3.Naziv ) )
+            ShopItem.Dodaj(item3);
 
         List<ShopItem> items = new List<ShopItem>();
         items = ShopItem.Brskaj();

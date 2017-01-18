@@ -10,15 +10,16 @@ namespace StackClone
     {
         public ShopItem() { }
 
-        public ShopItem( int id, string naziv )
+        public ShopItem( int id, string naziv, int cijena )
         {
             Id = id;
             Naziv = naziv;
+            Cijena = cijena;
         }
 
         public int Id { get; set; } = -1;
-
         public string Naziv { get; set; } = "";
+        public int Cijena { get; set; } = 1;
 
 
         /// <summary>
@@ -32,7 +33,8 @@ namespace StackClone
             SqlCommand cmd = new SqlCommand();
 
             string into = "[StackDB].[dbo].[tblShop]";
-            string insert = "INSERT INTO " + into + " (Naziv) VALUES ('" + item.Naziv + "');";
+            string insert = "INSERT INTO " + into + " (Naziv, Cijena) VALUES ('"
+                + item.Naziv + "', " + item.Cijena + ");";
 
             cmd.CommandText = insert;
             cmd.Connection = con;
@@ -107,7 +109,7 @@ namespace StackClone
 
             string from = "[StackDB].[dbo].[tblShop]";
             //                       0    1
-            string select = "SELECT Id, Naziv FROM " + from;
+            string select = "SELECT Id, Naziv, Cijena FROM " + from;
 
             cmd.CommandText = select;
             cmd.Connection = con;
@@ -120,10 +122,11 @@ namespace StackClone
                 SqlDataReader reader = cmd.ExecuteReader();
                 while ( reader.Read() )
                 {
-                    int idItema = reader.GetInt32( 1 );
-                    string naziv = reader.GetString( 2 );
+                    int idItema = reader.GetInt32( 0 );
+                    string naziv = reader.GetString( 1 );
+                    int cijena = reader.GetInt32( 2 );
 
-                    lista.Add( new ShopItem(idItema, naziv ));
+                    lista.Add( new ShopItem(idItema, naziv.Trim(), cijena ));
                 }
                 reader.Close();
                 return lista;
