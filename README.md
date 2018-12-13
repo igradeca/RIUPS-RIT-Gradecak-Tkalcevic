@@ -5,9 +5,9 @@ Main goal of this game is to add new tiles on top of previous one. That way towe
 
 The game can be played in online and offline mode. If you can't register and login, most likely the server is down. In online mode you have access to achievements that you have done and shop where you can buy things.
 
-Contributors:
-Luka Tkalčević(https://github.com/blackadder45) - Server
-Ivan Gradečak(https://github.com/igradeca) - Game itself
+Contributors:  
+Luka Tkalčević(https://github.com/blackadder45) - Server  
+Ivan Gradečak(https://github.com/igradeca) - Game itself  
 
 ![alt text](https://github.com/igradeca/RIUPS-RIT-Gradecak-Tkalcevic/blob/master/stack1.png)
 
